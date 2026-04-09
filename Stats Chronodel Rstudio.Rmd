@@ -10,17 +10,22 @@ The project that I am working on is to analyze the data of the Chronodel test, w
 
 At the beggining of the analysis, we wanted to calculate the sensibility, specificity, positive predictive value and negative predictive value of the Chronodel test, but at the reception of the results, we saw, that there are a variability in the results of the Chronodel test, which is really low, and that the majority of the patients have a result of 1 on the Chronodel test, which means that they succeed the test, because we expected to have a more variability in the results, and also because we expected to have a lower success rate for the Chronodel test, so we decided to change our analysis plan and to focus on pourcentage of success for the three tests (DOTWB, MOTYB) to evaluate the coherence between the results and at the end, the distribution of the results for the three tests, to evaluate the variability and the ceiling effect.
 
-The data cleaning data has been made earlier, in visual studio code, and the data is ready to be analyzed, so we will start by loading the data in Rstudio. A small number of missing values were observed across variables. As these were limited and not overlapping across tests, analyses were conducted using available data, with missing values excluded where necessary.
+A small number of missing values were observed across variables. As these were limited and not overlapping across tests, analyses were conducted using available data, with missing values excluded where necessary.
+
+The data cleaning data has been made earlier, in visual studio code, and the data is ready to be analyzed, so we will start by loading the data in Rstudio.
+
 
 ```{r}
 Data <- read.csv("Stat_Chronodel_Rstudio_test.csv")
 ```
 
+To do the kappa test, we need to have complete cases for the variables "jour_reussite" and "mois_reussi", so we will check how many complete cases we have for these two variables.
+
 ```{r}
 sum(complete.cases(Data[, c("jour_reussite", "mois_reussi")]))
 ```
 
-To do the kappa test, we need to have complete cases for the variables "jour_reussite" and "mois_reussi", so we will check how many complete cases we have for these two variables. we have a total of 36 completes cases for these two variables, which is enough to do the Kappa test.
+We have a total of 36 completes cases for these two variables, which is enough to do the Kappa test.
 
 
 ```{r}
@@ -32,6 +37,8 @@ As result of the Kappa test, we have a kappa value of 0.0859, that a really low 
 
 The p-value associated with the Kappa statistic was 0.204, which is above the conventional significance threshold of 0.05. Therefore, we fail to reject the null hypothesis (H0: κ = 0), meaning that there is no statistically significant agreement beyond chance between the two tests."
 
+we will create a cross table to estimate the coherence between the results of the two tests (DOTWB and MOTYB).
+
 ```{r}
 table(Data$jour_reussite, Data$mois_reussi, useNA = "no")
 ```
@@ -39,6 +46,8 @@ table(Data$jour_reussite, Data$mois_reussi, useNA = "no")
 What we can see about the table is that 1 subject has failed both tests, witch mean that we have a negative concordance, we have 0 subject that has failed DOTWB and succeed MOTYB, we have an important asymetry, 13 subjects have succeed DOTWB and failed MOTYB a major discordance, and a the end, we have 22 subjects that have succeed both tests, which is a positive concordance.
 
 We have a concordance of 22 + 1 = 23/36 = 63.89% of the subjects that have the same result in both tests, which is good concordance. But we have a discordance of 13/36 = 36.11% of the subjects that have different results in both tests, which is a huge discordance, that unbalance the concordance, and that explain the low kappa value that we have.
+
+we do now, the analysis of the success rate for the three tests, to evaluate the coherence between the results of the three tests, and to evaluate the ceiling effect for each test.
 
 ```{r}
 taux_jour <- mean(Data$jour_reussite, na.rm = TRUE)
@@ -61,7 +70,7 @@ abline(h=0.95, col="black", lty=2)
 text(x=1.225, y=1, labels="Ceiling effect threshold 95%", pos=4)
 ```
 
-For the result of the three tests, we have a success rate of 97.3% for the DOTWB test, which is really high, and that suggest a ceiling effect, we have a success rate of 58.97% for the MOTYB test, which is more balanced, and that doesn't suggest a ceiling effect, and at the end, we have a success rate of 100% for the Chronodel test, which is really high, and that suggest a ceiling effect.
+For the result of the three tests, we have a success rate of 97.3% for the DOTWB test, which is really high, and that suggest a ceiling effect (over 95%), we have a success rate of 58.97% for the MOTYB test, which is more balanced, and that doesn't suggest a ceiling effect, and at the end, we have a success rate of 100% for the Chronodel test, which is really high, and that suggest a ceiling effec (over 95%).
 
 ```{r}
 par(mfrow=c(1,3))
