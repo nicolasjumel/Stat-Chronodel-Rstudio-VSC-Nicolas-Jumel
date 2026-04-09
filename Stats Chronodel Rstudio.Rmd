@@ -10,7 +10,7 @@ The project that I am working on is to analyze the data of the Chronodel test, w
 
 At the beggining of the analysis, we wanted to calculate the sensibility, specificity, positive predictive value and negative predictive value of the Chronodel test, but at the reception of the results, we saw, that there are a variability in the results of the Chronodel test, which is really low, and that the majority of the patients have a result of 1 on the Chronodel test, which means that they succeed the test, because we expected to have a more variability in the results, and also because we expected to have a lower success rate for the Chronodel test, so we decided to change our analysis plan and to focus on pourcentage of success for the three tests (DOTWB, MOTYB) to evaluate the coherence between the results and at the end, the distribution of the results for the three tests, to evaluate the variability and the ceiling effect.
 
-The data cleaning data has been made earlier, in visual studio code, and the data is ready to be analyzed, so we will start by loading the data in Rstudio.
+The data cleaning data has been made earlier, in visual studio code, and the data is ready to be analyzed, so we will start by loading the data in Rstudio. A small number of missing values were observed across variables. As these were limited and not overlapping across tests, analyses were conducted using available data, with missing values excluded where necessary.
 
 ```{r}
 Data <- read.csv("Stat_Chronodel_Rstudio_test.csv")
