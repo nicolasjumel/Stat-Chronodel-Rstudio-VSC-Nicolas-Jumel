@@ -12,7 +12,7 @@ date: "2026-04-09"
 
 The project that I am working on is to analyze the data of the Chronodel test, which is a test that measures the ability to perform a task in a delimation of time of 30 seconds. The data is collected from a sample of participants who have taken the test (n = 43). The goal of this analysis is to experiment the test Chronodel understand the distribution of the results and to compare the results of the Chronodel test with other tests that measure similar abilities, by others, i mean, Day Of the Week Backward and (DOTWB) and Month Of The Year Backward (MOTYB).
 
-At the beggining of the analysis, we wanted to calculate the sensibility, specificity, positive predictive value and negative predictive value of the Chronodel test, but at the reception of the results, we saw, that there are a variability in the results of the Chronodel test, which is really low, and that the majority of the patients have a result of 1 on the Chronodel test, which means that they succeed the test, because we expected to have a more variability in the results, and also because we expected to have a lower success rate for the Chronodel test, so we decided to change our analysis plan and to focus on pourcentage of success for the three tests (DOTWB, MOTYB) to evaluate the coherence between the results and at the end, the distribution of the results for the three tests, to evaluate the variability and the ceiling effect.
+At the beginning of the analysis, we wanted to calculate the sensibility, specificity, positive predictive value and negative predictive value of the Chronodel test, but at the reception of the results, we saw, that there are a variability in the results of the Chronodel test, which is really low, and that the majority of the patients have a result of 1 on the Chronodel test, which means that they succeed the test, because we expected to have a more variability in the results, and also because we expected to have a lower success rate for the Chronodel test, so we decided to change our analysis plan and to focus on pourcentage of success for the three tests (DOTWB, MOTYB) to evaluate the coherence between the results and at the end, the distribution of the results for the three tests, to evaluate the variability and the ceiling effect.
 
 A small number of missing values were observed across variables. As these were limited and not overlapping across tests, analyses were conducted using available data, with missing values excluded where necessary.
 
@@ -41,7 +41,9 @@ library(irr)
 kappa2(Data[, c("jour_reussite", "mois_reussi")])
 ```
 
-As result of the Kappa test, we have a kappa value of 0.0859, that a really low value of agreement between the DOTWB and MOTYB tests. This suggest that the observed agreement is only slighty above ht would be expected by chance. This low Kappa value is likely explained by the highly unbalanced distribution of the data, with a majority of successful outcomes in the day-based test (ceiling effect), as well as the presence of discordant cases.
+## Kappa test results
+
+As result of the Kappa test, we have a kappa value of 0.0859, which is a really low value of agreement between the DOTWB and MOTYB tests. This suggest that the observed agreement is only slightly above what would be expected by chance. This low Kappa value is likely explained by the highly unbalanced distribution of the data, with a majority of successful outcomes in the day-based test (ceiling effect), as well as the presence of discordant cases.
 
 The p-value associated with the Kappa statistic was 0.204, which is above the conventional significance threshold of 0.05. Therefore, we fail to reject the null hypothesis (H0: κ = 0), meaning that there is no statistically significant agreement beyond chance between the two tests."
 
@@ -53,9 +55,16 @@ We will create a cross table to estimate the coherence between the results of th
 table(Data$jour_reussite, Data$mois_reussi, useNA = "no")
 ```
 
-What we can see about the table is that 1 subject has failed both tests, witch mean that we have a negative concordance, we have 0 subject that has failed DOTWB and succeed MOTYB, we have an important asymetry, 13 subjects have succeed DOTWB and failed MOTYB a major discordance, and a the end, we have 22 subjects that have succeed both tests, which is a positive concordance.
+## DOTWB vs MOTYB Concordance
+ 
+ From the cross table, we observe: 
+ 
+- 1 subject failed both DOTWB and MOTYB  
+- 0 subjects failed DOTWB but succeeded MOTYB  
+- 13 subjects succeeded DOTWB but failed MOTYB  
+- 22 subjects succeeded both tests  
 
-We have a concordance of 22 + 1 = 23/36 = 63.89% of the subjects that have the same result in both tests, which is good concordance. But we have a discordance of 13/36 = 36.11% of the subjects that have different results in both tests, which is a huge discordance, that unbalance the concordance, and that explain the low kappa value that we have.
+This results in 63.9% concordance (22+1/36) and 36.1% discordance (13/36), explaining the low Kappa value.
 
 # success rate
 
@@ -79,7 +88,7 @@ text(x=2, y=taux_mois+0.05, labels=paste0(round(taux_mois*100, 2), "%"))
 text(x=3, y=taux_chrono+0.05, labels=paste0(round(taux_chrono*100, 2), "%"))
 ```
 
-For the result of the three tests, we have a success rate of 97.3% for the DOTWB test, which is really high, and might suggest a ceiling effect, we have a success rate of 58.97% for the MOTYB test, which is more balanced, and that doesn't suggest a ceiling effect, and at the end, we have a success rate of 100% for the Chronodel test, which is really high, and that too aswell a ceiling effect.
+For the result of the three tests, we have a success rate of 97.3% for the DOTWB test, which is really high, and might suggest a ceiling effect, we have a success rate of 58.97% for the MOTYB test, which is more balanced, and that doesn't suggest a ceiling effect, and at the end, we have a success rate of 100% for the Chronodel test, which is really high, and that too as well a ceiling effect.
 
 # Distribution 
 

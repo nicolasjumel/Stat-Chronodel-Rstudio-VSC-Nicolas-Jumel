@@ -1583,7 +1583,7 @@ distribution of the results and to compare the results of the Chronodel
 test with other tests that measure similar abilities, by others, i mean,
 Day Of the Week Backward and (DOTWB) and Month Of The Year Backward
 (MOTYB).</p>
-<p>At the beggining of the analysis, we wanted to calculate the
+<p>At the beginning of the analysis, we wanted to calculate the
 sensibility, specificity, positive predictive value and negative
 predictive value of the Chronodel test, but at the reception of the
 results, we saw, that there are a variability in the results of the
@@ -1631,11 +1631,13 @@ is enough to do the Kappa test.</p>
 ## 
 ##         z = 1.27 
 ##   p-value = 0.204</code></pre>
-<p>As result of the Kappa test, we have a kappa value of 0.0859, that a
-really low value of agreement between the DOTWB and MOTYB tests. This
-suggest that the observed agreement is only slighty above ht would be
-expected by chance. This low Kappa value is likely explained by the
-highly unbalanced distribution of the data, with a majority of
+<div id="kappa-test-results" class="section level2">
+<h2>Kappa test results</h2>
+<p>As result of the Kappa test, we have a kappa value of 0.0859, which
+is a really low value of agreement between the DOTWB and MOTYB tests.
+This suggest that the observed agreement is only slightly above what
+would be expected by chance. This low Kappa value is likely explained by
+the highly unbalanced distribution of the data, with a majority of
 successful outcomes in the day-based test (ceiling effect), as well as
 the presence of discordant cases.</p>
 <p>The p-value associated with the Kappa statistic was 0.204, which is
@@ -1643,6 +1645,7 @@ above the conventional significance threshold of 0.05. Therefore, we
 fail to reject the null hypothesis (H0: κ = 0), meaning that there is no
 statistically significant agreement beyond chance between the two
 tests.”</p>
+</div>
 </div>
 <div id="cross-table" class="section level1">
 <h1>Cross table</h1>
@@ -1653,17 +1656,21 @@ results of the two tests (DOTWB and MOTYB).</p>
 ##      0  1
 ##   0  1  0
 ##   1 13 22</code></pre>
-<p>What we can see about the table is that 1 subject has failed both
-tests, witch mean that we have a negative concordance, we have 0 subject
-that has failed DOTWB and succeed MOTYB, we have an important asymetry,
-13 subjects have succeed DOTWB and failed MOTYB a major discordance, and
-a the end, we have 22 subjects that have succeed both tests, which is a
-positive concordance.</p>
-<p>We have a concordance of 22 + 1 = 23/36 = 63.89% of the subjects that
-have the same result in both tests, which is good concordance. But we
-have a discordance of 13/36 = 36.11% of the subjects that have different
-results in both tests, which is a huge discordance, that unbalance the
-concordance, and that explain the low kappa value that we have.</p>
+<div id="dotwb-vs-motyb-concordance" class="section level2">
+<h2>##DOTWB vs MOTYB Concordance</h2>
+<p>From the cross table, we observe:</p>
+<ul>
+<li>1 subject failed both DOTWB and MOTYB<br />
+</li>
+<li>0 subjects failed DOTWB but succeeded MOTYB<br />
+</li>
+<li>13 subjects succeeded DOTWB but failed MOTYB<br />
+</li>
+<li>22 subjects succeeded both tests</li>
+</ul>
+<p>This results in 63.9% concordance (22+1/36) and 36.1% discordance
+(13/36), explaining the low Kappa value.</p>
+</div>
 </div>
 <div id="success-rate" class="section level1">
 <h1>success rate</h1>
@@ -1691,7 +1698,7 @@ for the DOTWB test, which is really high, and might suggest a ceiling
 effect, we have a success rate of 58.97% for the MOTYB test, which is
 more balanced, and that doesn’t suggest a ceiling effect, and at the
 end, we have a success rate of 100% for the Chronodel test, which is
-really high, and that too aswell a ceiling effect.</p>
+really high, and that too as well a ceiling effect.</p>
 </div>
 <div id="distribution" class="section level1">
 <h1>Distribution</h1>
