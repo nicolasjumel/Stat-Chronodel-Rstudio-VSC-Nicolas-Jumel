@@ -2928,18 +2928,23 @@ border-radius: 0px;
 
 <div id="chronodel-data-analysis" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Chronodel Data Analysis</h1>
-<p>The project that I am working on is to analyze the data of the <strong><em>Chronodel test</em></strong>, which is a test that measures the ability to perform a task in a duration of 30 seconds. The data is collected from a sample of participants who have taken the test (n = 43). The aim of this analysis is to evaluate the Chronodel test, explore the distribution of results, and compare it with other tests measuring similar cognitive abilities, namely the <em>DOTWB</em> and <em>MOTYB</em> tests.</p>
-<p>At the beginning of the analysis, we wanted to calculate the <strong>sensibility</strong>, <strong>specificity</strong>, <strong>positive predictive</strong> value and <strong>negative predictive value</strong> of the <em>Chronodel test</em>, but at the reception of the results, we observed low variability in the results of the <em>Chronodel test</em>, which is really low, and that the majority of the patients have a result of 1 on the <em>Chronodel test</em>, which means that they succeed the test, because we expected to have a more variability in the results, and also because we expected to have a lower success rate for the <em>Chronodel test</em>, the analysis plan was revised due to observed low variability in the <em>Chronodel</em> outcomes, to focus on pourcentage of success for the three tests (<em>DOTWB</em>, <em>MOTYB</em>, <em>Chronodel</em>) to evaluate the coherence between the results and at the end, the distribution of the results for the three tests, to evaluate the variability and the ceiling effect.</p>
-<p>A small number of missing values were observed across variables. As these were limited and not overlapping across tests, analyses were conducted using available data, with missing values excluded where necessary.</p>
+<p>The aim of this study is to analyze data from the <em>Chronodel test</em>, which assesses the ability to perform a task within 30 seconds. The dataset includes a sample of participants (n = 43).</p>
+<p>The objectives were to evaluate the Chronodel test, describe the distribution of results, and compare its performance with two other tests assessing similar cognitive functions: <em>DOTWB</em> and <em>MOTYB</em>.</p>
+<p>Initially, sensitivity, specificity, positive predictive value, and negative predictive value were planned for the Chronodel test. However, due to a low variability in the results — with most participants scoring 1 (indicating success) — this analysis was not appropriate.</p>
+<p>Therefore, the analysis plan was revised to focus on:
+- the percentage of success for each test (<em>DOTWB</em>, <em>MOTYB</em>, <em>Chronodel</em>)
+- the concordance between tests
+- the distribution of results to assess variability and potential ceiling effects</p>
+<p>A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.</p>
 </div>
-<div id="inclusion-of-the-data" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> inclusion of the data</h1>
+<div id="data-inclusion" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Data inclusion</h1>
 <p>Data cleaning was performed prior to analysis using Visual Studio Code. The dataset was then imported into RStudio for statistical analysis.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>Data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Stat_Chronodel_Rstudio_test.csv&quot;</span>)</span></code></pre></div>
 </div>
 <div id="total-subjects" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Total subjects</h1>
-<p><strong>Cohen’s kappa analysis</strong> was conducted on complete cases across the three variables. Therefore, the number of complete observations available for jour_reussite (<em>DOTWB</em>) and mois_reussi (<em>MOTYB</em>) was assessed prior to analysis.</p>
+<p><strong>Cohen’s kappa analyses</strong> were conducted using complete cases for each pairwise comparison.. Therefore, the number of complete observations available for jour_reussite (<em>DOTWB</em>) and mois_reussi (<em>MOTYB</em>) was assessed prior to analysis.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">complete.cases</span>(Data[, <span class="fu">c</span>(<span class="st">&quot;jour_reussite&quot;</span>, <span class="st">&quot;mois_reussi&quot;</span>)]))</span></code></pre></div>
 <pre><code>## [1] 36</code></pre>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">complete.cases</span>(Data[, <span class="fu">c</span>(<span class="st">&quot;jour_reussite&quot;</span>, <span class="st">&quot;chrono_reussi&quot;</span>)]))</span></code></pre></div>
@@ -3037,7 +3042,7 @@ border-radius: 0px;
 </div>
 <div id="success-rate" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> success rate</h1>
-<p>The success rates of the three tests were analysed to assess their coherence and potential ceiling effects (see Figure <a href="#fig:fig-success">6.1</a>)).</p>
+<p>The success rates of the three tests were analysed to assess their coherence and potential ceiling effects (see Figure <a href="#fig:fig-success">6.1</a>).</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>taux_jour <span class="ot">&lt;-</span> <span class="fu">mean</span>(Data<span class="sc">$</span>jour_reussite, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>taux_mois <span class="ot">&lt;-</span> <span class="fu">mean</span>(Data<span class="sc">$</span>mois_reussi, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>taux_chrono <span class="ot">&lt;-</span> <span class="fu">mean</span>(Data<span class="sc">$</span>chrono_reussi, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
@@ -3061,7 +3066,6 @@ Figure 6.1: Success rates for the three tests
 </p>
 </div>
 <p>Overall, success rates were <strong>97.3%</strong> for the <em>DOTWB</em> test, <strong>58.97%</strong> for the <em>MOTYB</em> test, and <strong>100%</strong> for the <em>Chronodel test</em>. A ceiling effect is suggested for the <em>DOTWB</em> and <em>Chronodel test</em> due to their high success rates, while the <em>MOTYB</em> test shows a <strong>more balanced distribution</strong> without evidence of a ceiling effect.</p>
-<p>Ceiling effect suggested for <em>DOTWB</em> and clearly demonstrates for <em>Chronodel</em></p>
 </div>
 <div id="distribution" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> Distribution</h1>
