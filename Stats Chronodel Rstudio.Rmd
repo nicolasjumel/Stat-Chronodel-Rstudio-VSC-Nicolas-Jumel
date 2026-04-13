@@ -22,10 +22,10 @@ output:
 <table style="width: 100%;">
   <tr>
     <td style="text-align: left;">
-      <img src="A:\Chronodel Stat fichier Rsudio + VSC\Stats Chronodel Rsutio + VSC\Stat Chronodel Rstudio VSC\LogoMontpellier.webp" height="100">
+      <img src="A:\Chronodel Stat fichier Rsudio + VSC\Stats Chronodel Rsutio + VSC\Stat Chronodel Rstudio VSC\Images\LogoMontpellier.webp" height="100">
     </td>
     <td style="text-align: right; padding-right: 20px;">
-      <img src="A:\Chronodel Stat fichier Rsudio + VSC\Stats Chronodel Rsutio + VSC\Stat Chronodel Rstudio VSC\chu-nimes.png" height="100">
+      <img src="A:\Chronodel Stat fichier Rsudio + VSC\Stats Chronodel Rsutio + VSC\Stat Chronodel Rstudio VSC\Images\chu-nimes.png" height="100">
     </td>
   </tr>
 </table>
