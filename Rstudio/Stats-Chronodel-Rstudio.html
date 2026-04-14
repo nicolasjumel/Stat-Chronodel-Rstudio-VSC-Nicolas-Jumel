@@ -2961,16 +2961,16 @@ Chronodel Data Analysis
 <p><strong>Initially</strong>, sensitivity, specificity, positive predictive value, and negative predictive value were planned for the Chronodel test. <strong>However</strong>, due to a <strong>low variability</strong> in the results — with most participants scoring 1 (indicating success) — this analysis <strong>was not appropriate</strong>.</p>
 <p>Therefore, the analysis plan was revised to focus on:</p>
 <ul>
-<li>the percentage of success for each test (<em>DOTWB</em>, <em>MOTYB</em>, <em>Chronodel</em>)</li>
-<li>the concordance between tests</li>
-<li>the distribution of results to assess variability and potential ceiling effects</li>
+<li><strong>the percentage of success</strong> for each test (<em>DOTWB</em>, <em>MOTYB</em>, <em>Chronodel</em>)</li>
+<li><strong>the concordance</strong> between tests</li>
+<li><strong>the distribution</strong> of results to assess variability and potential ceiling effects</li>
 </ul>
 <p>A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.</p>
 </div>
 </div>
 <div id="data-inclusion" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Data inclusion</h1>
-<p>Data cleaning was performed prior to analysis using Visual Studio Code. The dataset was then imported into RStudio for statistical analysis, from the file “Stat_Chronodel_Rstudio_test.csv”.</p>
+<p>Data cleaning was carried out prior to analysis using Visual Studio Code. The cleaned dataset was then imported into RStudio for statistical analysis from the file “Stat_Chronodel_Rstudio_test.csv”.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>Data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Stat_Chronodel_Rstudio_test.csv&quot;</span>)</span></code></pre></div>
 </div>
 <div id="total-subjects" class="section level1" number="3">
@@ -3033,7 +3033,8 @@ Chronodel Data Analysis
 <li><em>MOTYB</em> vs <em>Chronodel</em> : κ = 0 (p = 1)</li>
 </ul>
 <p>The <strong>Cohen’s kappa coefficients</strong> indicated a <strong>very low level</strong> of agreement across the three outcome measures. Agreement between <em>DOTWB</em> and <em>MOTYB</em> was weak (<strong>κ = 0.086</strong>, <strong>p = 0.204</strong>), whereas no agreement beyond chance was observed between <em>DOTWB</em> and <em>Chronodel</em> (<strong>κ = 0</strong>, <strong>p = 1</strong>), as well as between <em>MOTYB</em> and <em>Chronodel</em> (<strong>κ = 0</strong>, <strong>p = 1</strong>).</p>
-<p>Overall, these results <strong>suggest</strong> a lack of meaningful concordance between the tested variables.</p>
+<p><strong>Cohen’s kappa</strong> was used as the <strong>primary measure of agreement</strong>, despite known limitations in the presence of highly unbalanced outcome distributions.</p>
+<p>Alternative agreement coefficients less sensitive to prevalence (e.g., <strong>Gwet’s AC1</strong>) have been proposed in the literature, but were not implemented in the present analysis due to <strong>software constraints</strong> and <strong>the exploratory nature</strong> of the study.(5)</p>
 <p>This pattern may be partly explained by <strong>distributional characteristics</strong> of the data, <strong>potentially indicating a ceiling effect</strong>, which will be further explored in the subsequent descriptive analyses and graphical representations.</p>
 </div>
 </div>
@@ -3070,7 +3071,8 @@ Chronodel Data Analysis
 <li>13 subjects succeeded <em>DOTWB</em> but failed <em>MOTYB</em></li>
 <li>22 subjects succeeded in both tests</li>
 </ul>
-<p>This corresponds to a <strong>concordance rate of 63.9 %</strong> (23/36) and a <strong>discordance rate of 36.1 %</strong> (13/36). The relatively high proportion of discordant classifications explains the low Kappa value.</p>
+<p>This corresponds to a concordance rate of 63.9% (23/36) and a discordance rate of 36.1% (13/36).
+These results are consistent with the low level of agreement observed using Cohen’s kappa</p>
 </div>
 </div>
 <div id="success-rate" class="section level1" number="6">
@@ -3159,7 +3161,7 @@ Figure 7.1: Distribution results for the three tests
 <p>The distribution of the <strong>DOTWB</strong> test results is highly skewed, with a majority of successful outcomes, <strong>suggesting</strong> a ceiling effect.</p>
 <p>The <strong>MOTYB</strong> test shows a more balanced distribution, with 40% “no” and 57.5% “yes”, which <strong>does not suggest a ceiling effect</strong>.</p>
 <p>For the <strong>Chronodel test</strong>, all participants achieved a successful outcome, <strong>strongly indicating a ceiling effect</strong>.</p>
-<p>This pattern may be explained by a lack of task difficulty. The tests may not have been sufficiently challenging for the participants, leading to limited variability and high success rates across all three measures.</p>
+<p>Ceiling effects may limit the interpretability of test scores when a task is too easy, leading to an accumulation of maximal scores and reduced discriminative capacity (4)</p>
 </div>
 <div id="main-results" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Main results</h1>
@@ -3175,9 +3177,11 @@ Figure 7.1: Distribution results for the three tests
 <div id="references" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> References</h1>
 <ol style="list-style-type: decimal">
+<li>Andorra, Boris, Alexandre Boussuge, Thomas Gilbert, et al. ‘Le Repérage et Le Diagnostic de l’état Confusionnel Aigu Chez Les Personnes Âgées : Quels Outils Rapides ?’ Gériatrie et Psychologie Neuropsychiatrie Du Vieillissement 20, no. 1 (2022): 17–27. <a href="https://doi.org/10.1684/pnv.2022.1022" class="uri">https://doi.org/10.1684/pnv.2022.1022</a>.</li>
+<li>Garnier-Crussard, Antoine, Clémence Grangé, Jean-Michel Dorey, and Guillaume Chapelet. ‘Diagnostic et Prise En Soins Du Syndrome Confusionnel Aigu Chez La Personne Âgée’. La Revue de Médecine Interne 46, no. 5 (2025): 265–75. <a href="https://doi.org/10.1016/j.revmed.2024.11.005" class="uri">https://doi.org/10.1016/j.revmed.2024.11.005</a>.</li>
 <li>Ramírez Echeverría, María de Lourdes, and Caroline Schoo. ‘Delirium’. In StatPearls. StatPearls Publishing, 2026. <a href="http://www.ncbi.nlm.nih.gov/books/NBK470399/" class="uri">http://www.ncbi.nlm.nih.gov/books/NBK470399/</a>.</li>
-<li>Garnier-Crussard, Antoine, Clémence Grangé, Jean-Michel Dorey, and Guillaume Chapelet. ‘Diagnostic et Prise En Soins Du Syndrome Confusionnel Aigu Chez La Personne Âgée’. La Revue de Médecine Interne 46, no. 5 (2025): 265–75. <a href="https://doi.org/10.1016/j.revmed.2024.11.005" class="uri">https://doi.org/10.1016/j.revmed.2024.11.005</a>.
-(3)Andorra, Boris, Alexandre Boussuge, Thomas Gilbert, et al. ‘Le Repérage et Le Diagnostic de l’état Confusionnel Aigu Chez Les Personnes Âgées : Quels Outils Rapides ?’ Gériatrie et Psychologie Neuropsychiatrie Du Vieillissement 20, no. 1 (2022): 17–27. <a href="https://doi.org/10.1684/pnv.2022.1022" class="uri">https://doi.org/10.1684/pnv.2022.1022</a>.</li>
+<li>Rasmussen, L. S., K. Larsen, P. Houx, et al. ‘The Assessment of Postoperative Cognitive Function’. Acta Anaesthesiologica Scandinavica 45, no. 3 (2001): 275–89. <a href="https://doi.org/10.1034/j.1399-6576.2001.045003275.x" class="uri">https://doi.org/10.1034/j.1399-6576.2001.045003275.x</a>.</li>
+<li>Zec, Slavica, Nicola Soriani, Rosanna Comoretto, and Ileana Baldi. ‘High Agreement and High Prevalence: The Paradox of Cohen’s Kappa’. The Open Nursing Journal 11 (October 2017): 211–18. <a href="https://doi.org/10.2174/1874434601711010211" class="uri">https://doi.org/10.2174/1874434601711010211</a>.</li>
 </ol>
 </div>
 
