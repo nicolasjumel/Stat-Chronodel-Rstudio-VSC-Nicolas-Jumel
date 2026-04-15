@@ -83,7 +83,7 @@ A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB
 
 ![Success rate](Images/success_rate.png)
 
-The success rates of the three tests were analysed to assess their coherence and potential ceiling effects.
+The success rates of the three tests were analysed to assess their **coherence** and **potential** ceiling effects.
 
 
 The Chronodel test shows a **perfect success rate (100%)**, which may indicate a potential ceiling effect.
@@ -92,7 +92,7 @@ The Chronodel test shows a **perfect success rate (100%)**, which may indicate a
 
 ![Distribution](Images/Distribution.png)
 
-The final figure presents the distribution of results across the three tests, in order to assess **variability** and potential **ceiling effects**.
+The final figure presents the distribution of results across the three tests, in order to assess **variability** and **potential** ceiling effects.
 
 The Chronodel test shows a **highly skewed distribution**, with 100% of successful outcomes (1), **suggesting** a ceiling effect.
 
