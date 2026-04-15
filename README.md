@@ -20,6 +20,8 @@ The objectives were to evaluate the Chronodel test, describe the distribution of
 
 ## Python objective
 
+The aim of the Python is to trait the data.
+
 Therefore, the analysis plan was revised to focus on :
 
 - **the percentage of success** for each test (*DOTWB*, *MOTYB*, *Chronodel*)
@@ -39,3 +41,53 @@ The following outcome variables were retained:
 - `jour_reussite` (DOTWB)
 - `mois_reussi` (MOTYB)
 - `chrono_reussi` (Chronodel)
+
+# Rstudio project
+
+The aim of Rstudio is to create, produce the final data after the python traitment
+
+A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.
+
+# Data inclusion
+
+Data cleaning was carried out prior to analysis using Visual Studio Code. The cleaned dataset was then imported into RStudio for statistical analysis from the file "Stat_Chronodel_Rstudio_test.csv".
+
+# Data traitment
+
+## Cohen's kappa
+
+**Cohen’s kappa analyses** were conducted separately for each pairwise comparison using the corresponding complete-case dataset. The number of available observations varied across comparisons due to missing data patterns.
+
+**Cohen’s kappa** was used as the **primary measure of agreement**, despite known limitations in the presence of highly unbalanced outcome distributions.
+
+Alternative agreement coefficients less sensitive to prevalence (e.g., **Gwet’s AC1**) have been proposed in the literature, but were not implemented in the present analysis due to **software constraints** and **the exploratory nature** of the study.(5)
+
+## Cross table
+
+A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB*.
+
+## success rate
+
+The success rates of the three tests were analysed to assess their coherence and potential ceiling effects.
+
+## Distribution 
+
+The final figure presents the distribution of results across the three tests, in order to assess **variability** and potential **ceiling effects**.
+
+# Conclusion
+
+The analysis of of the Chronodel's Data about the delirium reveals : 
+
+- The *DOTWB* suggests a possible ceiling effect.  
+- The *MOTYB* shows no evidence of a ceiling effect.  
+- The *Chronodel* test demonstrates a clear ceiling effect.
+
+**This interpretation is descriptive and based on outcome distributions rather than on a formal statistical test of ceiling effects.**
+
+# References
+
+1. Andorra, Boris, Alexandre Boussuge, Thomas Gilbert, et al. ‘Le Repérage et Le Diagnostic de l’état Confusionnel Aigu Chez Les Personnes Âgées : Quels Outils Rapides ?’ Gériatrie et Psychologie Neuropsychiatrie Du Vieillissement 20, no. 1 (2022): 17–27. https://doi.org/10.1684/pnv.2022.1022.
+2. Garnier-Crussard, Antoine, Clémence Grangé, Jean-Michel Dorey, and Guillaume Chapelet. ‘Diagnostic et Prise En Soins Du Syndrome Confusionnel Aigu Chez La Personne Âgée’. La Revue de Médecine Interne 46, no. 5 (2025): 265–75. https://doi.org/10.1016/j.revmed.2024.11.005.
+3. Ramírez Echeverría, María de Lourdes, and Caroline Schoo. ‘Delirium’. In StatPearls. StatPearls Publishing, 2026. http://www.ncbi.nlm.nih.gov/books/NBK470399/.
+4. Rasmussen, L. S., K. Larsen, P. Houx, et al. ‘The Assessment of Postoperative Cognitive Function’. Acta Anaesthesiologica Scandinavica 45, no. 3 (2001): 275–89. https://doi.org/10.1034/j.1399-6576.2001.045003275.x.
+5. Zec, Slavica, Nicola Soriani, Rosanna Comoretto, and Ileana Baldi. ‘High Agreement and High Prevalence: The Paradox of Cohen’s Kappa’. The Open Nursing Journal 11 (October 2017): 211–18. https://doi.org/10.2174/1874434601711010211.
