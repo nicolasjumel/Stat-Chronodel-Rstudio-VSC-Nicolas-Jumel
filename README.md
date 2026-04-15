@@ -81,7 +81,7 @@ A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB
 
 ## 5.3. Success rate
 
-![Success rate](Images/success_rate.png)
+![Success rate](Images/Success_rate.png)
 
 The success rates of the three tests were analysed to assess their **coherence** and **potential** ceiling effects.
 
