@@ -1,0 +1,4 @@
+"0","knitr::kable("
+"0","  table(Data$jour_reussite, Data$mois_reussi),"
+"0","  caption = ""Cross-tabulation between DOTWB and MOTYB results"""
+"0",")"

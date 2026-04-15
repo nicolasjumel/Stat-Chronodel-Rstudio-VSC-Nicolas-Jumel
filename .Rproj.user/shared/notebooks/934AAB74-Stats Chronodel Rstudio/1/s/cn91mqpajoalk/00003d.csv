@@ -1,0 +1,1 @@
+"0","text(x=3, y=taux_chrono+0.05, labels=paste0(round(taux_chrono*100, 2), ""%""))"

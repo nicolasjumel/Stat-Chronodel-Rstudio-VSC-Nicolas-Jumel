@@ -1,0 +1,1 @@
+"0","text(x=2, y=mean(Data$chrono_reussi, na.rm = TRUE)+0.05, labels=paste0(round(mean(Data$chrono_reussi, na.rm = TRUE)*100, 2), ""%""))"

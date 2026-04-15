@@ -1,0 +1,1 @@
+"0","text(x=2, y=taux_mois+0.05, labels=paste0(round(taux_mois*100, 2), ""%""))"
