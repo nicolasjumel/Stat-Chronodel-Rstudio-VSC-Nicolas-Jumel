@@ -83,6 +83,8 @@ The success rates of the three tests were analysed to assess their coherence and
 
 ## 5.4. Distribution 
 
+![Distribution](Images/Distribution.png)
+
 The final figure presents the distribution of results across the three tests, in order to assess **variability** and potential **ceiling effects**.
 
 # 6. Conclusion
