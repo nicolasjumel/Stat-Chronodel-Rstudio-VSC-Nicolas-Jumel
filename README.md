@@ -25,9 +25,12 @@ The objectives were to evaluate the Chronodel test, describe the distribution of
 
 # 2. Python Project
 
-## 2.1. Python objective
+## 2.1 Role of Python
 
-The aim of the Python is to trait the data.
+Python was used for:
+- Data cleaning
+- Selection of relevant variables
+- Preliminary descriptive analysis
 
 Therefore, the analysis plan was revised to focus on :
 
@@ -49,9 +52,12 @@ The following outcome variables were retained:
 - `mois_reussi` (MOTYB)
 - `chrono_reussi` (Chronodel)
 
-# 3. Rstudio project
+# 3. RStudio Project
 
-The aim of Rstudio is to create, produce the final data after the python traitment
+R was used for:
+- Statistical analysis (Cohen’s kappa)
+- Graphical representations
+- Final interpretation of results
 
 A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.
 
@@ -59,7 +65,7 @@ A small number of missing values were observed. As these were limited and not ov
 
 Data cleaning was carried out prior to analysis using Visual Studio Code. The cleaned dataset was then imported into RStudio for statistical analysis from the file "Stat_Chronodel_Rstudio_test.csv".
 
-# 5. Data traitment
+# 5. Data processing
 
 ## 5.1. Cohen's kappa
 
@@ -89,7 +95,7 @@ The final figure presents the distribution of results across the three tests, in
 
 # 6. Conclusion
 
-The analysis of of the Chronodel's Data about the delirium reveals : 
+analysis of Chronodel data in the context of delirium reveals : 
 
 - The *DOTWB* suggests a possible ceiling effect.  
 - The *MOTYB* shows no evidence of a ceiling effect.  
