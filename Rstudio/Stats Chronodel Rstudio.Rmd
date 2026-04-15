@@ -1,4 +1,8 @@
 ---
+title: "Chronodel Data Analysis"
+author: "Nicolas Jumel"
+date: "`r Sys.Date()`"
+
 output:
   bookdown::html_document2:
     theme: cosmo
@@ -9,16 +13,12 @@ output:
     number_sections: true
     df_print: paged
     self_contained: true
+    css: styles.css
 
   pdf_document:
     toc: true
     number_sections: true
 ---
-
-**Author :** Nicolas Jumel  
-**Master REHAB – University of Montpellier**  
-**Date :** 2025/2026
-
 <table style="width: 100%;">
   <tr>
     <td style="text-align: left;">
@@ -29,10 +29,6 @@ output:
     </td>
   </tr>
 </table>
-
-<div style="text-align: center;">
-  <h1>Chronodel Data Analysis</h1>
-</div>
 
 # The Delirium
 
@@ -65,7 +61,7 @@ A small number of missing values were observed. As these were limited and not ov
 Data cleaning was carried out prior to analysis using Visual Studio Code. The cleaned dataset was then imported into RStudio for statistical analysis from the file "Stat_Chronodel_Rstudio_test.csv".
 
 ```{r}
-Data <- read.csv("Stat_Chronodel_Rstudio_test.csv")
+Data <- read.csv("Data/Stat_Chronodel_Rstudio_test.csv")
 ```
 
 # Total subjects
