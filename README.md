@@ -2,7 +2,7 @@
 
 ## Key findings
 
-- Chronodel shows a **clear ceiling effect (100% success)**
+- Chronodel shows a **potential ceiling effect (100% success)**
 - DOTWB also suggests a **ceiling effect (97.3%)**
 - MOTYB presents a **balanced distribution (~59%)**
 - Low agreement between tests (**κ ≈ 0**)
@@ -86,7 +86,7 @@ A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB
 The success rates of the three tests were analysed to assess their coherence and potential ceiling effects.
 
 
-The Chronodel test shows a **perfect success rate (100%)**, highlighting a **potential** ceiling effect.
+The Chronodel test shows a **perfect success rate (100%)**, which may indicate a potential ceiling effect.
 
 ## 5.4. Distribution 
 
@@ -94,7 +94,7 @@ The Chronodel test shows a **perfect success rate (100%)**, highlighting a **pot
 
 The final figure presents the distribution of results across the three tests, in order to assess **variability** and potential **ceiling effects**.
 
-The Chronodel test shows a **fully skewed distribution**, with 100% of successful outcomes (1), **suggesting** a ceiling effect.
+The Chronodel test shows a **highly skewed distribution**, with 100% of successful outcomes (1), **suggesting** a ceiling effect.
 
 Ceiling effects may limit the interpretability of test scores when a task is too easy, leading to an accumulation of maximal scores and reduced discriminative capacity (4)
 
@@ -104,7 +104,7 @@ The analysis of Chronodel data in the context of delirium reveals:
 
 - The *DOTWB* suggests a possible ceiling effect.  
 - The *MOTYB* shows no evidence of a ceiling effect.  
-- The *Chronodel* test demonstrates a clear ceiling effect.
+- The *Chronodel* test strongly suggest a ceiling effect.
 
 **This interpretation is descriptive and based on outcome distributions rather than on a formal statistical test of ceiling effects.**
 
