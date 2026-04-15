@@ -7,7 +7,7 @@
 - MOTYB presents a **balanced distribution (~59%)**
 - Low agreement between tests (**κ ≈ 0**)
 
-## 1.1.Delirium
+## 1.1. Delirium
 
 Delirium is an acute clinical syndrome (ACS) that typically develops in older adults. It is characterized by disturbances in attention, awareness, and cognition, with a reduced ability to focus, sustain, or shift attention. It develops over a short period of time and tends to fluctuate throughout the day. The clinical presentation may vary, often including psychomotor and behavioral disturbances such as hyperactivity or hypoactivity, as well as alterations in sleep duration and architecture.(3)
 
