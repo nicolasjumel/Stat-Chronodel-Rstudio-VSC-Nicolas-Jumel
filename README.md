@@ -23,6 +23,12 @@ The objectives were to evaluate the Chronodel test, describe the distribution of
 
 **Initially**, sensitivity, specificity, positive predictive value, and negative predictive value were planned for the Chronodel test. **However**, due to a **low variability** in the results — with most participants scoring 1 (indicating success) — this analysis **was not appropriate**.
 
+Therefore, the analysis plan was revised to focus on :
+
+- **the percentage of success** for each test (*DOTWB*, *MOTYB*, *Chronodel*)
+- **the concordance** between tests
+- **the distribution** of results to assess variability and potential ceiling effects
+
 # 2. Python Project
 
 ## 2.1 Role of Python
@@ -31,12 +37,6 @@ Python was used for:
 - Data cleaning
 - Selection of relevant variables
 - Preliminary descriptive analysis
-
-Therefore, the analysis plan was revised to focus on :
-
-- **the percentage of success** for each test (*DOTWB*, *MOTYB*, *Chronodel*)
-- **the concordance** between tests
-- **the distribution** of results to assess variability and potential ceiling effects
 
 ## 2.2. Data preparation
 
@@ -85,15 +85,22 @@ A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB
 
 The success rates of the three tests were analysed to assess their coherence and potential ceiling effects.
 
+
+The Chronodel test shows a **perfect success rate (100%)**, highlighting a **potential** ceiling effect.
+
 ## 5.4. Distribution 
 
 ![Distribution](Images/Distribution.png)
 
 The final figure presents the distribution of results across the three tests, in order to assess **variability** and potential **ceiling effects**.
 
+The Chronodel test shows a **fully skewed distribution**, with 100% of successful outcomes (1), **suggesting** a ceiling effect.
+
+Ceiling effects may limit the interpretability of test scores when a task is too easy, leading to an accumulation of maximal scores and reduced discriminative capacity (4)
+
 # 6. Conclusion
 
-analysis of Chronodel data in the context of delirium reveals : 
+The analysis of Chronodel data in the context of delirium reveals:
 
 - The *DOTWB* suggests a possible ceiling effect.  
 - The *MOTYB* shows no evidence of a ceiling effect.  
