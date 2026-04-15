@@ -79,8 +79,6 @@ Alternative agreement coefficients less sensitive to prevalence (e.g., **Gwet’
 
 A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB*.
 
-## 5.3. success rate
-
 ## 5.3. Success rate
 
 ![Success rate](Images/success_rate.png)
