@@ -96,7 +96,7 @@ The final figure presents the distribution of results across the three tests, in
 
 The Chronodel test shows a **highly skewed distribution**, with 100% of successful outcomes (1), **suggesting** a ceiling effect.
 
-Ceiling effects may **limit** the **interpretability** of test scores when a task is too easy, leading to an accumulation of maximal scores and **reduced discriminative capacity**(4)
+Ceiling effects may **limit** the **interpretability** of test scores when a task is too easy, leading to an accumulation of maximal scores and **reduced discriminative capacity** (4)
 
 # 6. Conclusion
 
