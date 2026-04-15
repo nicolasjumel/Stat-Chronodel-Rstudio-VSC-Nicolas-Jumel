@@ -1,3 +1,0 @@
-"0",""
-"0","text(x=1, y=motyb_tab[1] + 0.05,"
-"0","     labels=paste0(round(motyb_tab[1]*100, 2), ""%""))"

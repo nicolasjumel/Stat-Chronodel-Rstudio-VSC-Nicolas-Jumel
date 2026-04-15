@@ -1,3 +1,0 @@
-"0",""
-"0","text(x=2, y=dotwb_tab[2] + 0.05,"
-"0","     labels=paste0(round(dotwb_tab[2]*100, 2), ""%""))"

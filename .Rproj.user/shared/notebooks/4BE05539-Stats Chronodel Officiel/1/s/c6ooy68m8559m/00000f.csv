@@ -1,2 +1,0 @@
-"0","# delete tle lines 11, 28 and 29 from the data"
-"0","Data <- Data[-c(11, 28, 29), ]"
