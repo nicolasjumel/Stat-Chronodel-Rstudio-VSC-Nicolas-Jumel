@@ -1,5 +1,12 @@
 # 1. Stat Chronodel Rstudio VSC
 
+## Key findings
+
+- Chronodel shows a **clear ceiling effect (100% success)**
+- DOTWB also suggests a **ceiling effect (97.3%)**
+- MOTYB presents a **balanced distribution (~59%)**
+- Low agreement between tests (**κ ≈ 0**)
+
 ## 1.1.Delirium
 
 Delirium is an acute clinical syndrome (ACS) that typically develops in older adults. It is characterized by disturbances in attention, awareness, and cognition, with a reduced ability to focus, sustain, or shift attention. It develops over a short period of time and tends to fluctuate throughout the day. The clinical presentation may vary, often including psychomotor and behavioral disturbances such as hyperactivity or hypoactivity, as well as alterations in sleep duration and architecture.(1)
@@ -67,6 +74,10 @@ Alternative agreement coefficients less sensitive to prevalence (e.g., **Gwet’
 A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB*.
 
 ## 5.3. success rate
+
+## 5.3. Success rate
+
+![Success rate](Images/success_rate.png)
 
 The success rates of the three tests were analysed to assess their coherence and potential ceiling effects.
 
