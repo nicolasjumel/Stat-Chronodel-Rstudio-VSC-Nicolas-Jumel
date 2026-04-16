@@ -56,11 +56,11 @@ The following outcome variables were retained:
 - `mois_reussi` (MOTYB)
 - `chrono_reussi` (Chronodel)
 
-## Script organization
+## 2.3 Script organization
 
-### Notebooks organization
+### 2.3.1 Notebooks organization
 
-#### Presence of data
+#### 2.3.1.1 Presence of data
 
 - **aim**: Checks that the Data file is present.
 - **input**: Data/ChronodelSansTNC_DATA_2026-03-30_1433.csv in `Data` folder
