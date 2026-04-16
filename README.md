@@ -58,6 +58,8 @@ The following outcome variables were retained:
 
 # 3. RStudio Project
 
+## 3.1 Role of Rstudio
+
 R was used for:
 - Statistical analysis (Cohen’s kappa)
 - Graphical representations

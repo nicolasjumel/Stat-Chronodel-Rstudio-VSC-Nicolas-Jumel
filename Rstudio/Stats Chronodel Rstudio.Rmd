@@ -56,21 +56,64 @@ Therefore, the analysis plan was revised to focus on:
 - **the concordance** between tests
 - **the distribution** of results to assess variability and potential ceiling effects
 
-A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data. 
+A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.
 
-# Data inclusion
+## Role of Rstudio
+
+R was used for:
+- Statistical analysis (Cohen’s kappa)
+- Graphical representations
+- Final interpretation of results
+
+# Data organization
+
+**file** "Stat_Chronodel_Rstudio_test.csv" contains the cleaned dataset with the following variables:
+- *jour_reussite* (DOTWB): binary variable indicating success (1) or failure (0) on the Day Of The Week Backward test
+- *mois_reussi* (MOTYB): binary variable indicating success (1) or failure (0) on the Month Of The Year Backward test
+- *chrono_reussi* : binary variable indicating success (1) or failure (0) on the Chronodel test
+
+# Script organization
+
+## Cohen's kappa
+
+- **aim** to assess the level of agreement between the three tests using Cohen’s kappa coefficient.
+- **Input** data from the cleaned dataset, "Stat_Chronodel_Rstudio_test.csv". saved in the "Data" folder.
+- **output** Cohen’s kappa coefficients and p-values for each pairwise comparison between the three tests.
+
+## cross table
+
+- **aim** to perform a cross-tabulation of results between *DOTWB* and *MOTYB* to assess concordance and discordance rates.
+- **Input** data from the cleaned dataset, "Stat_Chronodel_Rstudio_test.csv" and saved in the "Data" folder.
+- **output** a cross-tabulation table showing the counts of success and failure for *DOTWB* and *MOTYB*, along with calculated concordance and discordance rates.
+
+## success rate
+- **aim** to calculate the percentage of success for each test and to visualize these rates using a bar plot.
+- **Input** data from the cleaned dataset, "Stat_Chronodel_Rstudio_test.csv" and saved in the "Data" folder.
+- **output** a bar plot showing the success rates for *DOTWB*, *MOTYB*, and *Chronodel* called "Success rate for the three tests" and saved as "Success_rate_Rstudio.png"in the "Results" folder.
+
+## distribution 
+
+- **aim** to visualize the distribution of results for each test to assess variability and potential ceiling effects.
+- **Input** data from the cleaned dataset, "Stat_Chronodel_Rstudio_test.csv" and saved in the "Data" folder.
+- **output** three bar plots showing the distribution of results for *DOTWB*, *MOTYB*, and *Chronodel* called "Distribution DOTWB", "Distribution MOTYB", and "Distribution Chronodel" respectively, and saved as "Distribution_Rstudio.png" in the "Results" folder.
+
+# code
+
+## Data inclusion
 
 Data cleaning was carried out prior to analysis using Visual Studio Code. The cleaned dataset was then imported into RStudio for statistical analysis from the file "Stat_Chronodel_Rstudio_test.csv".
 
 ```{r}
+# Read the cleaned dataset
 Data <- read.csv("Data/Stat_Chronodel_Rstudio_test.csv")
 ```
 
-# Total subjects
+## Total subjects
 
 **Cohen’s kappa analyses** were conducted using complete cases for each pairwise comparison.. Therefore, the number of complete observations available for jour_reussite (*DOTWB*) and mois_reussi (*MOTYB*) was assessed prior to analysis.
 
 ```{r}
+# Calculate the number of complete cases for each pairwise comparison
 sum(complete.cases(Data[, c("jour_reussite", "mois_reussi")]))
 sum(complete.cases(Data[, c("jour_reussite", "chrono_reussi")]))
 sum(complete.cases(Data[, c("mois_reussi", "chrono_reussi")]))
@@ -86,6 +129,7 @@ sum(complete.cases(Data[, c("mois_reussi", "chrono_reussi")]))
 # Kappa test
 
 ```{r}
+# usse library(irr) for Cohen's kappa analysis for each pairwise comparison
 library(irr)
 kappa2(Data[, c("jour_reussite", "mois_reussi")])
 kappa2(Data[, c("jour_reussite", "chrono_reussi")])
@@ -134,11 +178,17 @@ The success rates of the three tests were analysed to assess their coherence and
 
 ```{r fig-success, fig.cap="Success rates for the three tests"}
 
+# name each data column for clarity
+
 taux_jour <- mean(Data$jour_reussite, na.rm = TRUE)
 taux_mois <- mean(Data$mois_reussi, na.rm = TRUE)
 taux_chrono <- mean(Data$chrono_reussi, na.rm = TRUE)
 
+# create a vector of success rates for the three tests
+
 taux <- c(taux_jour, taux_mois, taux_chrono)
+
+# create a bar plot of success rates
 
 bp <- barplot(taux,
         names.arg = c("DOTWB", "MOTYB", "Chronodel"),
@@ -146,7 +196,7 @@ bp <- barplot(taux,
         ylab = "Success rate",
         main = "Success rate for the three tests",
         col = c("red", "blue", "green"))
-
+# add text labels with success rates on top of the bars
 text(bp, taux,
      labels=paste0(round(taux*100, 2), "%"),
      pos=3)
@@ -161,21 +211,31 @@ Overall, success rates were **97.3%** for the *DOTWB* test, **58.97%** for the *
 The final figure presents the distribution of results across the three tests, in order to assess **variability** and potential **ceiling effects**.(see Figure \@ref(fig:fig-distribution)).
 
 ```{r fig-distribution, fig.cap="Distribution results for the three tests"}
-plot_binary <- function(x, title){
+# function to plot the distribution of binary outcomes for each test
 
+plot_binary <- function(x, title){
+  
+# create a table of counts for the binary variable, ensuring that both 0 and 1 are included as levels
+  
   tab <- table(factor(x, levels=c(0,1)))
   tab <- prop.table(tab)
 
+# create a bar plot of the distribution of outcomes
+  
   bp <- barplot(tab,
                 main=title,
                 ylim=c(0,1.1),
                 col=c("red","green"),
                 names.arg=c("0","1"))
 
+# add text labels with percentages on top of the bars
+  
   text(bp, tab,
        labels=paste0(round(tab*100,2),"%"),
        pos=3)
 }
+
+# set up the plotting area to display three plots side by side
 
 par(mfrow=c(1,3))
 
