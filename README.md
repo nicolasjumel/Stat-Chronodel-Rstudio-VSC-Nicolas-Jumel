@@ -56,6 +56,21 @@ The following outcome variables were retained:
 - `mois_reussi` (MOTYB)
 - `chrono_reussi` (Chronodel)
 
+## Script organization
+
+### Notebooks organization
+
+#### Presence of data
+
+- **aim**: Checks that the Data file is present.
+- **input**: Data/ChronodelSansTNC_DATA_2026-03-30_1433.csv in `Data` folder
+- **output**: Present or not present
+ 
+#### Excluded on inclusion criteria
+
+- **aim**: Excluded the subjects that do not meet the study's inclusions criteria.
+- **input**: 
+
 # 3. RStudio Project
 
 ## 3.1 Role of Rstudio
