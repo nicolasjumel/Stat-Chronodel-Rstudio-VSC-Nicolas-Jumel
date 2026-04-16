@@ -73,11 +73,13 @@ Data cleaning was carried out prior to analysis using Visual Studio Code. The cl
 
 ## 5.1. Cohen's kappa
 
-**Cohen’s kappa analyses** were conducted separately for each pairwise comparison using the corresponding complete-case dataset. The number of available observations varied across comparisons due to missing data patterns.
+**Cohen’s kappa analyses-** were conducted separately for each pairwise comparison using pairwise complete-case datasets. As a result, the effective sample size varied across comparisons depending on the availability of both variables involved in each pair
 
-**Cohen’s kappa** was used as the **primary measure of agreement**, despite known limitations in the presence of highly unbalanced outcome distributions.
+**Cohen’s kappa** was used as the **primary measure of agreement**, despite known limitations in the presence of highly unbalanced outcome distributions including the so-called paradox of Cohen’s kappa.
 
 Alternative agreement coefficients less sensitive to prevalence (e.g., **Gwet’s AC1**) have been proposed in the literature, but were not implemented in the present analysis due to **software constraints** and **the exploratory nature** of the study.(5)
+
+This pattern may be partly explained by **distributional characteristics** of the data, **potentially indicating a ceiling effect**, which will be further explored in the subsequent descriptive analyses and graphical representations.
 
 ## 5.2. Cross table
 

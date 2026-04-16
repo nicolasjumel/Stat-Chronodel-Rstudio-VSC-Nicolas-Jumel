@@ -100,7 +100,7 @@ kappa2(Data[, c("mois_reussi", "chrono_reussi")])
 
 The **Cohen’s kappa coefficients** indicated a **very low level** of agreement across the three outcome measures. Agreement between *DOTWB* and *MOTYB* was weak (**κ = 0.086**, **p = 0.204**), whereas no agreement beyond chance was observed between *DOTWB* and *Chronodel* (**κ = 0**, **p = 1**), as well as between *MOTYB* and *Chronodel* (**κ = 0**, **p = 1**).
 
-**Cohen’s kappa** was used as the **primary measure of agreement**, despite known limitations in the presence of highly unbalanced outcome distributions including the so-called paradox of Cohen’s kappa
+**Cohen’s kappa** was used as the **primary measure of agreement**, despite known limitations in the presence of highly unbalanced outcome distributions including the so-called paradox of Cohen’s kappa.
 
 Alternative agreement coefficients less sensitive to prevalence (e.g., **Gwet’s AC1**) have been proposed in the literature, but were not implemented in the present analysis due to **software constraints** and **the exploratory nature** of the study.(5)
 
