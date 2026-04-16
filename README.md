@@ -9,25 +9,29 @@
 
 ## 1.1. Delirium
 
-Delirium is an acute clinical syndrome (ACS) that typically develops in older adults. It is characterized by disturbances in attention, awareness, and cognition, with a reduced ability to focus, sustain, or shift attention. It develops over a short period of time and tends to fluctuate throughout the day. The clinical presentation may vary, often including psychomotor and behavioral disturbances such as hyperactivity or hypoactivity, as well as alterations in sleep duration and architecture.(3)
+Delirium is an acute clinical syndrome (ACS) that typically develops in older adults. It is characterized by disturbances in attention, awareness, and cognition, with a reduced ability to focus, sustain, or shift attention. It develops over a short period of time and tends to fluctuate throughout the day. The clinical presentation may vary, often including psychomotor and behavioral disturbances such as hyperactivity or hypoactivity, as well as alterations in sleep duration and architecture.(1)
 
 The clinical features are defined by the DSM-5 as follows: a disturbance in attention (Criterion A); a rapid onset of symptoms (Criterion B); symptoms associated with an additional cognitive disturbance (Criterion C). These symptoms must not be better explained by a pre-existing neurocognitive disorder (NCD) or by a severely reduced level of arousal such as coma (Criterion D). There must also be evidence from the medical history, physical examination, or additional investigations supporting a direct medical cause, substance intoxication, medication use, or withdrawal (Criterion E).(2)
 
 ## 1.2. Chronodel presentation
 
-The aim of this study is to analyze data from the Chronodel test, which assesses the ability to perform a task within 30 seconds—specifically, counting from 0 to 30 in the correct order, without repetition and without skipping any numbers. The dataset includes a sample of participants (n = 43).
+The aim of this study is to analyze data from the **Chronodel test**, which assesses the ability to perform a task within **30 seconds—specifically**, counting from 0 to 30 in the correct order, without repetition and without skipping any numbers. The dataset includes a sample of participants (**n = 43**).
 
-The objectives were to evaluate the Chronodel test, describe the distribution of results, and compare its performance with two other tests assessing similar cognitive functions: Day Of The Week Backward *DOTWB* and Month Of The Year Backward *MOTYB*. (1)
+The study was **initially** designed to assess the diagnostic performance of the *Chronodel test*, including sensitivity, specificity, positive predictive value (PPV), and negative predictive value (NPV), and to compare its performance with two other tests assessing similar cognitive functions: *Day Of The Week Backward* (*DOTWB*) and *Month Of The Year Backward* (*MOTYB*). (3)
+
+As the study is still ongoing, a **preliminary analysis** of the available data was conducted to **explore** the distribution of results and the level of agreement between the three tests.
 
 ## 1.3. Methodological Adjustment: Change in Primary Objective
 
-**Initially**, sensitivity, specificity, positive predictive value, and negative predictive value were planned for the Chronodel test. **However**, due to a **low variability** in the results — with most participants scoring 1 (indicating success) — this analysis **was not appropriate**.
+However, due to a **low variability** in the results — with most participants scoring 1 (indicating success) — the initially planned diagnostic performance analyses were not appropriate.
 
-Therefore, the analysis plan was revised to focus on :
+Therefore, the analysis plan was revised to focus on:
 
 - **the percentage of success** for each test (*DOTWB*, *MOTYB*, *Chronodel*)
 - **the concordance** between tests
 - **the distribution** of results to assess variability and potential ceiling effects
+
+A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.
 
 # 2. Python Project
 
@@ -94,7 +98,7 @@ The Chronodel test shows a **perfect success rate (100%)**, which may indicate a
 
 The final figure presents the distribution of results across the three tests, in order to assess **variability** and **potential** ceiling effects.
 
-The Chronodel test shows a **highly skewed distribution**, with 100% of successful outcomes (1), **suggesting** a ceiling effect.
+The Chronodel test shows a **highly skewed distribution**, with 100% of successful outcomes, **suggesting** a ceiling effect.
 
 Ceiling effects may **limit** the **interpretability** of test scores when a task is too easy, leading to an accumulation of maximal scores and **reduced discriminative capacity** (4)
 

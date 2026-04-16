@@ -191,9 +191,9 @@ The distribution of the *DOTWB* test results is highly skewed, with a majority o
 
 The *MOTYB* test shows a more balanced distribution, with **41.03%** “no” and **58.97%** “yes”, which **does not suggest a ceiling effect**.
 
-For the *Chronodel test*, all participants achieved a successful outcome, **strongly indicating a ceiling effect**.
+For the *Chronodel test*, all participants achieved a successful outcome, **suggesting** a ceiling effect.
 
-Ceiling effects may limit the interpretability of test scores when a task is too easy, leading to an accumulation of maximal scores and reduced discriminative capacity (4)
+Ceiling effects may **limit** the **interpretability** of test scores when a task is too easy, leading to an accumulation of maximal scores and **reduced discriminative capacity** (4)
 
 # Main results
 
