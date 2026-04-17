@@ -58,25 +58,28 @@ The following outcome variables were retained:
 
 ## 2.3 Script organization
 
-### 2.3.1 Notebooks organization
+### 2.3.1 Data processing pipeline
 
-#### 2.3.1.1 Presence of data
+#### 2.3.1.1 Data import verification
 
-- **aim**: Checks that the Data file is present.
-- **input**: Execute `Data/ChronodelSansTNC_DATA_2026-03-30_1433.csv` as `Data`.
-- **output**: Present or not present
+- **Aim**: Verify the presence of the dataset in the project directory.
+- **Input**: Raw dataset file (Data/ChronodelSansTNC_DATA_2026-03-30_1433.csv)
+- **Output**: Confirmation of file availability
  
-#### 2.3.1.2 Excluded on inclusion criteria
+#### 2.3.1.2 Application of inclusion criteria
 
-- **aim**: Excluded the subjects that do not meet the study's inclusions criteria.
-- **input**: Execute `Data`, modificate `Data` with subjets excluded
-- **output**: `Data` ready for coding
+- **Aim**: Exclude subjects not meeting the study inclusion criteria.
+- **Input**: Raw dataset (Data)
+- **Output**: Filtered dataset containing eligible subjects only
 
-#### 2.3.1.3 analysed success rate and clean dataset
+#### 2.3.1.3 Descriptive analysis and data cleaning
 
-- **aim**: analyze success rate of tests and produced clean dataset
-- **input**: Execute `Data`, `data_graph.csv` of success rate for each tests and  created `Success_rate_Rstudio.png` graph
-- **output**: Graph produced as `Success_rate_Rstudio.png` in `Figures` folder, clean dataset as `Results/Stat_Chronodel_Rstudio_test.csv` and success rate as `data_graph.csv` in `Results` folder
+- **Aim**: Compute success rates and generate descriptive statistics.
+- **Input**: Cleaned dataset
+- **Output**:
+    - Success rate table (data_graph.csv)
+    - Figure (Success_rate_Rstudio.png)
+    - Final analysis dataset (Stat_Chronodel_Rstudio_test.csv)
 
 # 3. RStudio Project
 
