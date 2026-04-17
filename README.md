@@ -63,13 +63,20 @@ The following outcome variables were retained:
 #### 2.3.1.1 Presence of data
 
 - **aim**: Checks that the Data file is present.
-- **input**: Data/ChronodelSansTNC_DATA_2026-03-30_1433.csv in `Data` folder
+- **input**: Execute `Data/ChronodelSansTNC_DATA_2026-03-30_1433.csv` as `Data`.
 - **output**: Present or not present
  
-#### Excluded on inclusion criteria
+#### 2.3.1.2 Excluded on inclusion criteria
 
 - **aim**: Excluded the subjects that do not meet the study's inclusions criteria.
-- **input**: 
+- **input**: Execute `Data`, modificate `Data` with subjets excluded
+- **output**: `Data` ready for coding
+
+#### 2.3.1.3 analysed success rate and clean dataset
+
+- **aim**: analyze success rate of tests
+- **input**: Execute `Data`, `pourcentage` of success rate for each tests and graph created
+- **output**: Graph produced as `Success_rate_Rstudio.png` in `Figures` folder, clean dataset as `Results/Stat_Chronodel_Rstudio_test.csv` and success rate as `data_graph.csv` in `Results` folder
 
 # 3. RStudio Project
 
