@@ -169,7 +169,7 @@ The analysis of Chronodel data in the context of delirium reveals:
 - The *MOTYB* shows no evidence of a ceiling effect.  
 - The *Chronodel* test strongly suggests a ceiling effect.
 
-**This interpretation is descriptive and based on outcome distributions rather than on a formal statistical test of ceiling effects.**
+**This interpretation is descriptive and based on outcome distributions rather than on a formal statistical test of ceiling effects. In addition, results are based on available data per analysis, and comparisons should therefore be interpreted cautiously due to partially overlapping samples.**
 
 # 6. References
 
