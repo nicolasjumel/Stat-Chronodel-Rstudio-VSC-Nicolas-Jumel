@@ -63,7 +63,7 @@ The following outcome variables were retained:
 #### 2.3.1.1 Data import verification
 
 - **Aim**: Verify the presence of the dataset in the project directory.
-- **Input**: Raw dataset file (Data/ChronodelSansTNC_DATA_2026-03-30_1433.csv)
+- **Input**: Raw dataset file (Data/ChronodelSansTNC_DATA_2026-03-30_1433.csv) from `Data` folder
 - **Output**: Confirmation of file availability
  
 #### 2.3.1.2 Application of inclusion criteria
@@ -77,9 +77,9 @@ The following outcome variables were retained:
 - **Aim**: Compute success rates and generate descriptive statistics.
 - **Input**: Cleaned dataset
 - **Output**:
-    - Success rate table (data_graph.csv)
-    - Figure (Success_rate_Rstudio.png)
-    - Final analysis dataset (Stat_Chronodel_Rstudio_test.csv)
+    - Success rate table (data_graph.csv) into `Results` folder
+    - Figure (Success_rate_Rstudio.png) into `Figures` folder
+    - Final analysis dataset (Stat_Chronodel_Rstudio_test.csv) into `Results` folder
 
 # 3. RStudio Project
 
@@ -91,6 +91,38 @@ R was used for:
 - Final interpretation of results
 
 A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.
+
+# 3.1.1 Data organization
+
+**file** "Stat_Chronodel_Rstudio_test.csv" contains the cleaned dataset with the following variables:
+- *jour_reussite* (DOTWB): binary variable indicating success (1) or failure (0) on the Day Of The Week Backward test
+- *mois_reussi* (MOTYB): binary variable indicating success (1) or failure (0) on the Month Of The Year Backward test
+- *chrono_reussi* : binary variable indicating success (1) or failure (0) on the Chronodel test
+
+# 3.1.2 Script organization
+
+## 3.1.2.1 Cohen's kappa
+
+- **aim** to assess the level of agreement between the three tests using Cohen’s kappa coefficient.
+- **Input** data from the cleaned dataset, "Stat_Chronodel_Rstudio_test.csv". saved in the "Data" folder.
+- **output** Cohen’s kappa coefficients and p-values for each pairwise comparison between the three tests.
+
+## 3.1.2.2 cross table
+
+- **aim** to perform a cross-tabulation of results between *DOTWB* and *MOTYB* to assess concordance and discordance rates.
+- **Input** data from the cleaned dataset, "Stat_Chronodel_Rstudio_test.csv" and saved in the "Data" folder.
+- **output** a cross-tabulation table showing the counts of success and failure for *DOTWB* and *MOTYB*, along with calculated concordance and discordance rates.
+
+## 3.1.2.3 success rate
+- **aim** to calculate the percentage of success for each test and to visualize these rates using a bar plot.
+- **Input** data from the cleaned dataset, "Stat_Chronodel_Rstudio_test.csv" and saved in the "Data" folder.
+- **output** a bar plot showing the success rates for *DOTWB*, *MOTYB*, and *Chronodel* called "Success rate for the three tests" and saved as "Success_rate_Rstudio.png"in the "Results" folder.
+
+## 3.1.2.4 distribution 
+
+- **aim** to visualize the distribution of results for each test to assess variability and potential ceiling effects.
+- **Input** data from the cleaned dataset, "Stat_Chronodel_Rstudio_test.csv" and saved in the "Data" folder.
+- **output** three bar plots showing the distribution of results for *DOTWB*, *MOTYB*, and *Chronodel* called "Distribution DOTWB", "Distribution MOTYB", and "Distribution Chronodel" respectively, and saved as "Distribution_Rstudio.png" in the "Results" folder.
 
 # 4. Data inclusion
 
