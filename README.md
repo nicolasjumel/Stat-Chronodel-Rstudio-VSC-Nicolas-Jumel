@@ -94,7 +94,7 @@ A small number of missing values were observed. As these were limited and not ov
 
 # 3.1.1 Data organization
 
-**file** "Stat_Chronodel_Rstudio_test.csv" contains the cleaned dataset with the following variables:
+**The file** "Stat_Chronodel_Rstudio_test.csv" contains the cleaned dataset with the following variables:
 - *jour_reussite* (DOTWB): binary variable indicating success (1) or failure (0) on the Day Of The Week Backward test
 - *mois_reussi* (MOTYB): binary variable indicating success (1) or failure (0) on the Month Of The Year Backward test
 - *chrono_reussi* : binary variable indicating success (1) or failure (0) on the Chronodel test
@@ -103,20 +103,20 @@ A small number of missing values were observed. As these were limited and not ov
 
 ## 3.1.2.1 Cohen's kappa
 
-- **aim** to assess the level of agreement between the three tests using Cohen’s kappa coefficient.
-- **Input** data from the cleaned dataset, "Stat_Chronodel_Rstudio_test.csv". saved in the "Data" folder.
-- **output** Cohen’s kappa coefficients and p-values for each pairwise comparison between the three tests.
+- **aim**: to assess the level of agreement between the three tests using Cohen’s kappa coefficient.
+- **Input**: cleaned dataset stored in the Data folder.
+- **output**: Cohen’s kappa coefficients and p-values for each pairwise comparison between the three tests.
 
 ## 3.1.2.2 cross table
 
-- **aim** to perform a cross-tabulation of results between *DOTWB* and *MOTYB* to assess concordance and discordance rates.
-- **Input** data from the cleaned dataset, "Stat_Chronodel_Rstudio_test.csv" and saved in the "Data" folder.
-- **output** a cross-tabulation table showing the counts of success and failure for *DOTWB* and *MOTYB*, along with calculated concordance and discordance rates.
+- **aim**: to perform a cross-tabulation of results between *DOTWB* and *MOTYB* to assess concordance and discordance rates.
+- **Input**: cleaned dataset stored in the Data folder.
+- **output**: a cross-tabulation table showing the counts of success and failure for *DOTWB* and *MOTYB*, along with calculated concordance and discordance rates.
 
 ## 3.1.2.3 success rate
-- **aim** to calculate the percentage of success for each test and to visualize these rates using a bar plot.
-- **Input** data from the cleaned dataset, "Stat_Chronodel_Rstudio_test.csv" and saved in the "Data" folder.
-- **output** a bar plot showing the success rates for *DOTWB*, *MOTYB*, and *Chronodel* called "Success rate for the three tests" and saved as "Success_rate_Rstudio.png"in the "Results" folder.
+- **aim**: to calculate the percentage of success for each test and to visualize these rates using a bar plot.
+- **Input**: cleaned dataset stored in the Data folder.
+- **output**: a bar plot showing the success rates for *DOTWB*, *MOTYB*, and *Chronodel* called "Success rate for the three tests" and saved as "Success_rate_Rstudio.png"in the "Results" folder.
 
 ## 3.1.2.4 distribution 
 
