@@ -86,9 +86,9 @@ The following outcome variables were retained:
 ## 3.1 Role of Rstudio
 
 R was used for:
-- Statistical analysis (Cohen’s kappa)
-- Graphical representations
-- Final interpretation of results
+- statistical analysis (Cohen’s kappa)
+- graphical representations
+- final interpretation of results
 
 A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.
 
@@ -103,34 +103,32 @@ A small number of missing values were observed. As these were limited and not ov
 
 ## 3.1.2.1 Cohen's kappa
 
-- **aim**: to assess the level of agreement between the three tests using Cohen’s kappa coefficient.
-- **Input**: cleaned dataset stored in the Data folder.
+- **aim**: assess the level of agreement between the three tests using Cohen’s kappa coefficient.
+- **Input**: cleaned dataset stored in the `Data` folder.
 - **output**: Cohen’s kappa coefficients and p-values for each pairwise comparison between the three tests.
 
 ## 3.1.2.2 cross table
 
-- **aim**: to perform a cross-tabulation of results between *DOTWB* and *MOTYB* to assess concordance and discordance rates.
-- **Input**: cleaned dataset stored in the Data folder.
+- **aim**: perform a cross-tabulation of results between *DOTWB* and *MOTYB* to assess concordance and discordance rates.
+- **Input**: cleaned dataset stored in the `Data` folder.
 - **output**: a cross-tabulation table showing the counts of success and failure for *DOTWB* and *MOTYB*, along with calculated concordance and discordance rates.
 
 ## 3.1.2.3 success rate
 - **aim**: to calculate the percentage of success for each test and to visualize these rates using a bar plot.
-- **Input**: cleaned dataset stored in the Data folder.
-- **output**: a bar plot showing the success rates for *DOTWB*, *MOTYB*, and *Chronodel* called "Success rate for the three tests" and saved as "Success_rate_Rstudio.png"in the "Results" folder.
+- **Input**: cleaned dataset stored in the `Data` folder.
+- **output**: a bar plot showing the success rates for *DOTWB*, *MOTYB*, and *Chronodel* called "Success rate for the three tests" and saved as (Success_rate_Rstudio.png)in the `Results` folder.
 
 ## 3.1.2.4 distribution 
 
-- **aim** to visualize the distribution of results for each test to assess variability and potential ceiling effects.
-- **Input** data from the cleaned dataset, "Stat_Chronodel_Rstudio_test.csv" and saved in the "Data" folder.
-- **output** three bar plots showing the distribution of results for *DOTWB*, *MOTYB*, and *Chronodel* called "Distribution DOTWB", "Distribution MOTYB", and "Distribution Chronodel" respectively, and saved as "Distribution_Rstudio.png" in the "Results" folder.
+- **aim**: to visualize the distribution of results for each test to assess variability and potential ceiling effects.
+- **Input**: cleaned dataset stored in the `Data` folder.
+- **output**: three bar plots showing the distribution of results for *DOTWB*, *MOTYB*, and *Chronodel* called "Distribution DOTWB", "Distribution MOTYB", and "Distribution Chronodel" respectively, and saved as (Distribution_Rstudio.png) in the `Results` folder.
 
-# 4. Data inclusion
+# 4. Data processing
 
 Data cleaning was carried out prior to analysis using Visual Studio Code. The cleaned dataset was then imported into RStudio for statistical analysis from the file "Stat_Chronodel_Rstudio_test.csv".
 
-# 5. Data processing
-
-## 5.1. Cohen's kappa
+## 4.1 Cohen's kappa
 
 **Cohen’s kappa analyses-** were conducted separately for each pairwise comparison using pairwise complete-case datasets. As a result, the effective sample size varied across comparisons depending on the availability of both variables involved in each pair
 
@@ -140,11 +138,11 @@ Alternative agreement coefficients less sensitive to prevalence (e.g., **Gwet’
 
 This pattern may be partly explained by **distributional characteristics** of the data, **potentially indicating a ceiling effect**, which will be further explored in the subsequent descriptive analyses and graphical representations.
 
-## 5.2. Cross table
+## 4.2 Cross table
 
 A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB*.
 
-## 5.3. Success rate
+## 4.3 Success rate
 
 ![Success rate](Images/Success_rate.png)
 
@@ -153,7 +151,7 @@ The success rates of the three tests were analysed to assess their **coherence**
 
 The Chronodel test shows a **perfect success rate (100%)**, which may indicate a potential ceiling effect.
 
-## 5.4. Distribution 
+## 4.4 Distribution 
 
 ![Distribution](Images/Distribution.png)
 
@@ -163,17 +161,17 @@ The Chronodel test shows a **highly skewed distribution**, with 100% of successf
 
 Ceiling effects may **limit** the **interpretability** of test scores when a task is too easy, leading to an accumulation of maximal scores and **reduced discriminative capacity** (4)
 
-# 6. Conclusion
+# 5. Conclusion
 
 The analysis of Chronodel data in the context of delirium reveals:
 
 - The *DOTWB* suggests a possible ceiling effect.  
 - The *MOTYB* shows no evidence of a ceiling effect.  
-- The *Chronodel* test strongly suggest a ceiling effect.
+- The *Chronodel* test strongly suggests a ceiling effect.
 
 **This interpretation is descriptive and based on outcome distributions rather than on a formal statistical test of ceiling effects.**
 
-# 7. References
+# 6. References
 
 1. Andorra, Boris, Alexandre Boussuge, Thomas Gilbert, et al. ‘Le Repérage et Le Diagnostic de l’état Confusionnel Aigu Chez Les Personnes Âgées : Quels Outils Rapides ?’ Gériatrie et Psychologie Neuropsychiatrie Du Vieillissement 20, no. 1 (2022): 17–27. https://doi.org/10.1684/pnv.2022.1022.
 2. Garnier-Crussard, Antoine, Clémence Grangé, Jean-Michel Dorey, and Guillaume Chapelet. ‘Diagnostic et Prise En Soins Du Syndrome Confusionnel Aigu Chez La Personne Âgée’. La Revue de Médecine Interne 46, no. 5 (2025): 265–75. https://doi.org/10.1016/j.revmed.2024.11.005.
