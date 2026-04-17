@@ -74,8 +74,8 @@ The following outcome variables were retained:
 
 #### 2.3.1.3 analysed success rate and clean dataset
 
-- **aim**: analyze success rate of tests
-- **input**: Execute `Data`, `pourcentage` of success rate for each tests and graph created
+- **aim**: analyze success rate of tests and produced clean dataset
+- **input**: Execute `Data`, `data_graph.csv` of success rate for each tests and  created `Success_rate_Rstudio.png` graph
 - **output**: Graph produced as `Success_rate_Rstudio.png` in `Figures` folder, clean dataset as `Results/Stat_Chronodel_Rstudio_test.csv` and success rate as `data_graph.csv` in `Results` folder
 
 # 3. RStudio Project
