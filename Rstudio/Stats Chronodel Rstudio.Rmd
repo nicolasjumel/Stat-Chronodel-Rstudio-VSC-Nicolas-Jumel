@@ -30,6 +30,10 @@ output:
   </tr>
 </table>
 
+# Project accessibility
+
+The project is available on GitHub at this link: https://github.com/nicolasjumel/Stat-Chronodel-Rstudio-VSC-Nicolas-Jumel
+
 # The Delirium
 
 ## General context
