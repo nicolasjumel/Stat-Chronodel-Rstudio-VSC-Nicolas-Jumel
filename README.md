@@ -111,7 +111,7 @@ A small number of missing values were observed. As these were limited and not ov
 
 - **aim**: perform a cross-tabulation of results between *DOTWB* and *MOTYB* to assess concordance and discordance rates.
 - **Input**: cleaned dataset stored in the `Data` folder.
-- **output**: a cross-tabulation table showing the counts of success and failure for *DOTWB* and *MOTYB*, along with calculated concordance and discordance rates.
+- **output**: a cross-tabulation table showing the counts of success and failure for *DOTWB* and *MOTYB*, along with calculated concordance and discordance rates saved as (cross_tab_dotwb_motyb.csv) in the `Rstudio/Results` folder.
 
 ## 3.1.2.3 success rate
 - **aim**: to calculate the percentage of success for each test and to visualize these rates using a bar plot.
