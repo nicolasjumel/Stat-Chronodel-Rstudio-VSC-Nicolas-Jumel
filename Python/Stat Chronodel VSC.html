@@ -7850,12 +7850,13 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Delirium">Delirium<a class="anchor-link" href="#Delirium">¶</a></h1><p><strong>Delirium</strong> is an acute clinical syndrome (ACS) that typically develops in <strong>older adults</strong>. It is characterized by <strong>disturbances</strong> in attention, awareness, and cognition, with a <strong>reduced ability</strong> to focus, sustain, or shift attention. It develops over a short period of time and tends to fluctuate throughout the day. The clinical presentation may vary, often including <strong>psychomotor</strong> and <strong>behavioral</strong> disturbances such as hyperactivity or hypoactivity, as well as alterations in sleep duration and architecture.(1)</p>
+<h1 id="0.-Project-accessibility">0. Project accessibility<a class="anchor-link" href="#0.-Project-accessibility">¶</a></h1><p>The project is available on GitHub at this link: <a href="https://github.com/nicolasjumel/Stat-Chronodel-Rstudio-VSC-Nicolas-Jumel">https://github.com/nicolasjumel/Stat-Chronodel-Rstudio-VSC-Nicolas-Jumel</a></p>
+<h1 id="1.-Delirium">1. Delirium<a class="anchor-link" href="#1.-Delirium">¶</a></h1><p><strong>Delirium</strong> is an acute clinical syndrome (ACS) that typically develops in <strong>older adults</strong>. It is characterized by <strong>disturbances</strong> in attention, awareness, and cognition, with a <strong>reduced ability</strong> to focus, sustain, or shift attention. It develops over a short period of time and tends to fluctuate throughout the day. The clinical presentation may vary, often including <strong>psychomotor</strong> and <strong>behavioral</strong> disturbances such as hyperactivity or hypoactivity, as well as alterations in sleep duration and architecture.(1)</p>
 <p>The clinical features are defined by the <strong>DSM-5</strong> as follows: a disturbance in attention (Criterion A); a rapid onset of symptoms (Criterion B); symptoms associated with an additional cognitive disturbance (Criterion C). These symptoms must not be better explained by a pre-existing neurocognitive disorder (NCD) or by a severely reduced level of arousal such as coma (Criterion D). There must also be evidence from the medical history, physical examination, or additional investigations supporting a direct medical cause, substance intoxication, medication use, or withdrawal (Criterion E).(2)</p>
-<h2 id="Chronodel-presentation">Chronodel presentation<a class="anchor-link" href="#Chronodel-presentation">¶</a></h2><p>The aim of this study is to analyze data from the <strong>Chronodel test</strong>, which assesses the ability to perform a task within <strong>30 seconds—specifically</strong>, counting from 0 to 30 in the correct order, without repetition and without skipping any numbers. The dataset includes a sample of participants (<strong>n = 43</strong>).</p>
+<h2 id="1.1-Chronodel-presentation">1.1 Chronodel presentation<a class="anchor-link" href="#1.1-Chronodel-presentation">¶</a></h2><p>The aim of this study is to analyze data from the <strong>Chronodel test</strong>, which assesses the ability to perform a task within <strong>30 seconds—specifically</strong>, counting from 0 to 30 in the correct order, without repetition and without skipping any numbers. The dataset includes a sample of participants (<strong>n = 43</strong>).</p>
 <p>The study was <strong>initially</strong> designed to assess the diagnostic performance of the <em>Chronodel test</em>, including sensitivity, specificity, positive predictive value (PPV), and negative predictive value (NPV), and to compare its performance with two other tests assessing similar cognitive functions: <em>Day Of The Week Backward</em> (<em>DOTWB</em>) and <em>Month Of The Year Backward</em> (<em>MOTYB</em>). (3)</p>
 <p>As the study is still ongoing, a <strong>preliminary analysis</strong> of the available data was conducted to <strong>explore</strong> the distribution of results and the level of agreement between the three tests.</p>
-<h2 id="Methodological-Adjustment:-Change-in-Primary-Objective">Methodological Adjustment: Change in Primary Objective<a class="anchor-link" href="#Methodological-Adjustment:-Change-in-Primary-Objective">¶</a></h2><p>However, due to a <strong>low variability</strong> in the results — with most participants scoring 1 (indicating success) — the initially planned diagnostic performance analyses were not appropriate.</p>
+<h2 id="1.2-Methodological-Adjustment:-Change-in-Primary-Objective">1.2 Methodological Adjustment: Change in Primary Objective<a class="anchor-link" href="#1.2-Methodological-Adjustment:-Change-in-Primary-Objective">¶</a></h2><p>However, due to a <strong>low variability</strong> in the results — with most participants scoring 1 (indicating success) — the initially planned diagnostic performance analyses were not appropriate.</p>
 <p>Therefore, the analysis plan was revised to focus on:</p>
 <ul>
 <li><strong>the percentage of success</strong> for each test (<em>DOTWB</em>, <em>MOTYB</em>, <em>Chronodel</em>)</li>
@@ -7863,13 +7864,13 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 <li><strong>the distribution</strong> of results to assess variability and potential ceiling effects</li>
 </ul>
 <p>A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.</p>
-<h2 id="Role-of-Python">Role of Python<a class="anchor-link" href="#Role-of-Python">¶</a></h2><p>Python was used for:</p>
+<h1 id="2-Role-of-Python">2 Role of Python<a class="anchor-link" href="#2-Role-of-Python">¶</a></h1><p>Python was used for:</p>
 <ul>
 <li>Data cleaning</li>
 <li>Selection of relevant variables</li>
 <li>Preliminary descriptive analysis</li>
 </ul>
-<h2 id="Data-preparation">Data preparation<a class="anchor-link" href="#Data-preparation">¶</a></h2><p>The dataset was first loaded and preprocessed. Subjects who did not meet the study’s inclusion criteria were excluded from the analysis.</p>
+<h1 id="3-Data-preparation">3 Data preparation<a class="anchor-link" href="#3-Data-preparation">¶</a></h1><p>The dataset was first loaded and preprocessed. Subjects who did not meet the study’s inclusion criteria were excluded from the analysis.</p>
 <p>Preliminary descriptive analyses were performed to assess the distribution of the variables and the corresponding success rates, including graphical visualizations.</p>
 <p>The dataset was then restricted to the variables relevant to the study objectives.</p>
 <p>The following outcome variables were retained:</p>
@@ -7878,17 +7879,17 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 <li><code>mois_reussi</code> (MOTYB)</li>
 <li><code>chrono_reussi</code> (Chronodel)</li>
 </ul>
-<h2 id="Script-organization">Script organization<a class="anchor-link" href="#Script-organization">¶</a></h2><h3 id="Data-processing-pipeline">Data processing pipeline<a class="anchor-link" href="#Data-processing-pipeline">¶</a></h3><h4 id="Data-import-verification">Data import verification<a class="anchor-link" href="#Data-import-verification">¶</a></h4><ul>
+<h1 id="4-Script-organization">4 Script organization<a class="anchor-link" href="#4-Script-organization">¶</a></h1><h2 id="4.1-Data-processing-pipeline">4.1 Data processing pipeline<a class="anchor-link" href="#4.1-Data-processing-pipeline">¶</a></h2><h3 id="4.1.1-Data-import-verification">4.1.1 Data import verification<a class="anchor-link" href="#4.1.1-Data-import-verification">¶</a></h3><ul>
 <li><strong>Aim</strong>: Verify the presence of the dataset in the project directory.</li>
 <li><strong>Input</strong>: Raw dataset file (Data/ChronodelSansTNC_DATA_2026-03-30_1433.csv) from <code>Data</code> folder</li>
 <li><strong>Output</strong>: Confirmation of file availability</li>
 </ul>
-<h4 id="Application-of-inclusion-criteria">Application of inclusion criteria<a class="anchor-link" href="#Application-of-inclusion-criteria">¶</a></h4><ul>
+<h3 id="4.1.2-Application-of-inclusion-criteria">4.1.2 Application of inclusion criteria<a class="anchor-link" href="#4.1.2-Application-of-inclusion-criteria">¶</a></h3><ul>
 <li><strong>Aim</strong>: Exclude subjects not meeting the study inclusion criteria.</li>
 <li><strong>Input</strong>: Raw dataset (Data)</li>
 <li><strong>Output</strong>: Filtered dataset containing eligible subjects only</li>
 </ul>
-<h4 id="Descriptive-analysis-and-data-cleaning">Descriptive analysis and data cleaning<a class="anchor-link" href="#Descriptive-analysis-and-data-cleaning">¶</a></h4><ul>
+<h3 id="4.1.3-Descriptive-analysis-and-data-cleaning">4.1.3 Descriptive analysis and data cleaning<a class="anchor-link" href="#4.1.3-Descriptive-analysis-and-data-cleaning">¶</a></h3><ul>
 <li><strong>Aim</strong>: Compute success rates and generate descriptive statistics.</li>
 <li><strong>Input</strong>: Cleaned dataset</li>
 <li><strong>Output</strong>:<ul>
@@ -7898,6 +7899,17 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 </ul>
 </li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=74b531be">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="5-Code">5 Code<a class="anchor-link" href="#5-Code">¶</a></h1><h2 id="5.1-Dataset-loading">5.1 Dataset loading<a class="anchor-link" href="#5.1-Dataset-loading">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8106,6 +8118,17 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1828f9c6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="5.2-Exclusion-criteria">5.2 Exclusion criteria<a class="anchor-link" href="#5.2-Exclusion-criteria">¶</a></h2>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=cf80d122">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8167,6 +8190,17 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>The initial sample consisted of 43 subjects. Following exclusion based on the inclusion criteria, the final sample size was reduced to n = 40.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=40513fd4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="5.3-Distribution-and-Success-rate">5.3 Distribution and Success rate<a class="anchor-link" href="#5.3-Distribution-and-Success-rate">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8236,6 +8270,17 @@ Success rate for chrono_reussi: 100.00%
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f255ec7e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="5.4-Analysis-of-success-rates">5.4 Analysis of success rates<a class="anchor-link" href="#5.4-Analysis-of-success-rates">¶</a></h2>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d57eb6a4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8295,6 +8340,17 @@ Success rate for chrono_reussi: 100.00%
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=37ba4b64">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="6-Creation-of-the-cleaned-dataset">6 Creation of the cleaned dataset<a class="anchor-link" href="#6-Creation-of-the-cleaned-dataset">¶</a></h1>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=48769fef">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8318,6 +8374,17 @@ Success rate for chrono_reussi: 100.00%
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>A cleaned dataset was generated for subsequent statistical analysis in RStudio. It includes only the variables of interest (<code>jour_reussite</code>, <code>mois_reussi</code>, <code>chrono_reussi</code>) and was exported as (Stat_Chronodel_Rstudio_test.csv) in the <code>Results</code> folder.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0479f132">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="7-Data-validation">7 Data validation<a class="anchor-link" href="#7-Data-validation">¶</a></h1>
 </div>
 </div>
 </div>
@@ -8411,7 +8478,7 @@ Success rate for chrono_reussi: 100.00%
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="References">References<a class="anchor-link" href="#References">¶</a></h1><ol>
+<h1 id="8-References">8 References<a class="anchor-link" href="#8-References">¶</a></h1><ol>
 <li>Andorra, Boris, Alexandre Boussuge, Thomas Gilbert, et al. ‘Le Repérage et Le Diagnostic de l’état Confusionnel Aigu Chez Les Personnes Âgées : Quels Outils Rapides ?’ Gériatrie et Psychologie Neuropsychiatrie Du Vieillissement 20, no. 1 (2022): 17–27. <a href="https://doi.org/10.1684/pnv.2022.1022">https://doi.org/10.1684/pnv.2022.1022</a>.</li>
 <li>Garnier-Crussard, Antoine, Clémence Grangé, Jean-Michel Dorey, and Guillaume Chapelet. ‘Diagnostic et Prise En Soins Du Syndrome Confusionnel Aigu Chez La Personne Âgée’. La Revue de Médecine Interne 46, no. 5 (2025): 265–75. <a href="https://doi.org/10.1016/j.revmed.2024.11.005">https://doi.org/10.1016/j.revmed.2024.11.005</a>.</li>
 <li>Ramírez Echeverría, María de Lourdes, and Caroline Schoo. ‘Delirium’. In StatPearls. StatPearls Publishing, 2026. <a href="http://www.ncbi.nlm.nih.gov/books/NBK470399/">http://www.ncbi.nlm.nih.gov/books/NBK470399/</a>.</li>
