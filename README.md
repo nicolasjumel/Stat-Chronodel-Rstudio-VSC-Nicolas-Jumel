@@ -147,6 +147,8 @@ A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB
 
 - `Rstudio/Results/cross_tab_dotwb_motyb.csv`
 
+![cross_tab_dotwb_motyb.csv](Rstudio/Results/cross_tab_dotwb_motyb.csv)
+
 ## 4.3 Success rate
 
 ![Success rate](Images/Success_rate.png)
