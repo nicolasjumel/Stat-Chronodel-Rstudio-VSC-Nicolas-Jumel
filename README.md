@@ -139,7 +139,7 @@ statistical analysis from the file "Stat_Chronodel_Rstudio_test.csv".
 
 Alternative agreement coefficients less sensitive to prevalence (e.g., **Gwet’s AC1**) have been proposed in the literature, but were not implemented in the present analysis due to **software constraints** and **the exploratory nature** of the study.(5)
 
-The **very low kappa values** should be interpreted in the context of the **outcome distributions**. This lack of variability **limits** the ability of agreement statistics to detect concordance beyond chance. These aspects are further explored in the descriptive analyses.
+The **very low kappa values (κ ≈ 0 across comparisons**) should be interpreted in the context of the **outcome distributions**. This lack of variability **limits** the ability of agreement statistics to detect concordance beyond chance. These aspects are further explored in the descriptive analyses.
 
 ## 4.2 Cross table
 
