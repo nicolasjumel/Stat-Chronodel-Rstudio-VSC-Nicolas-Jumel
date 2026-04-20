@@ -152,6 +152,8 @@ The cross-tabulation between *DOTWB* and *MOTYB* is available in the Results fol
 | 0 | 1 | 0 |
 | 1 | 13 | 22 |
 
+The cross-tabulation confirms a relatively low concordance between *DOTWB* and *MOTYB*, with a discordance rate of 36.1% (13/36), consistent with the low agreement observed using Cohen’s kappa.
+
 ## 4.3 Success rate
 
 ![Success rate](Images/Success_rate.png)
