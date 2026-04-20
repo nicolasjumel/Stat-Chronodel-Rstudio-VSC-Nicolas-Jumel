@@ -2968,19 +2968,22 @@ border-radius: 0px;
 </div>
 <div id="role-of-rstudio" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> 3.1 Role of Rstudio</h2>
-<p>R was used for:
-- statistical analysis (Cohen’s kappa)
-- graphical representations
-- final interpretation of results</p>
-<p>A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.</p>
+<p>R was used for:</p>
+<ul>
+<li>statistical analysis (Cohen’s kappa)</li>
+<li>graphical representations</li>
+<li>final interpretation of results</li>
+</ul>
 </div>
 </div>
 <div id="data-organization" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Data organization</h1>
-<p><strong>The file</strong> “Stat_Chronodel_Rstudio_test.csv” contains the cleaned dataset with the following variables:
-- <em>jour_reussite</em> (DOTWB): binary variable indicating success (1) or failure (0) on the Day Of The Week Backward test
-- <em>mois_reussi</em> (MOTYB): binary variable indicating success (1) or failure (0) on the Month Of The Year Backward test
-- <em>chrono_reussi</em> : binary variable indicating success (1) or failure (0) on the Chronodel test</p>
+<p><strong>The file</strong> “Stat_Chronodel_Rstudio_test.csv” contains the cleaned dataset with the following variables:</p>
+<ul>
+<li><em>jour_reussite</em> (DOTWB): binary variable indicating success (1) or failure (0) on the Day Of The Week Backward test</li>
+<li><em>mois_reussi</em> (MOTYB): binary variable indicating success (1) or failure (0) on the Month Of The Year Backward test</li>
+<li><em>chrono_reussi</em> : binary variable indicating success (1) or failure (0) on the Chronodel test</li>
+</ul>
 </div>
 <div id="script-organization" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Script organization</h1>
@@ -3005,7 +3008,7 @@ border-radius: 0px;
 <ul>
 <li><strong>aim</strong>: to calculate the percentage of success for each test and to visualize these rates using a bar plot.</li>
 <li><strong>Input</strong>: cleaned dataset stored in the <code>Data</code> folder.</li>
-<li><strong>output</strong>: a bar plot showing the success rates for <em>DOTWB</em>, <em>MOTYB</em>, and <em>Chronodel</em> called “Success rate for the three tests” and saved as (Success_rate_Rstudio.png)in the <code>Results</code> folder.</li>
+<li><strong>output</strong>: a bar plot showing the success rates for <em>DOTWB</em>, <em>MOTYB</em>, and <em>Chronodel</em> called “Success rate for the three tests” and saved as (Success_rate_Rstudio.png) in the <code>Results</code> folder.</li>
 </ul>
 </div>
 <div id="distribution" class="section level2" number="3.4">
@@ -3027,7 +3030,7 @@ border-radius: 0px;
 </div>
 <div id="total-subjects" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Total subjects</h2>
-<p><strong>Cohen’s kappa analyses</strong> were conducted using complete cases for each pairwise comparison.. Therefore, the number of complete observations available for jour_reussite (<em>DOTWB</em>) and mois_reussi (<em>MOTYB</em>) was assessed prior to analysis.</p>
+<p><strong>Cohen’s kappa analyses</strong> were conducted using complete cases for each pairwise comparison. Therefore, the number of complete observations available for jour_reussite (<em>DOTWB</em>) and mois_reussi (<em>MOTYB</em>) was assessed prior to analysis.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># Calculate the number of complete cases for each pairwise comparison</span></span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">complete.cases</span>(Data[, <span class="fu">c</span>(<span class="st">&quot;jour_reussite&quot;</span>, <span class="st">&quot;mois_reussi&quot;</span>)]))</span></code></pre></div>
 <pre><code>## [1] 36</code></pre>

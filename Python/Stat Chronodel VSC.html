@@ -7850,8 +7850,8 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Delirium">Delirium<a class="anchor-link" href="#Delirium">¶</a></h1><p>Delirium is an acute clinical syndrome (ACS) that typically develops in older adults. It is characterized by disturbances in attention, awareness, and cognition, with a reduced ability to focus, sustain, or shift attention. It develops over a short period of time and tends to fluctuate throughout the day. The clinical presentation may vary, often including psychomotor and behavioral disturbances such as hyperactivity or hypoactivity, as well as alterations in sleep duration and architecture.(1)</p>
-<p>The clinical features are defined by the DSM-5 as follows: a disturbance in attention (Criterion A); a rapid onset of symptoms (Criterion B); symptoms associated with an additional cognitive disturbance (Criterion C). These symptoms must not be better explained by a pre-existing neurocognitive disorder (NCD) or by a severely reduced level of arousal such as coma (Criterion D). There must also be evidence from the medical history, physical examination, or additional investigations supporting a direct medical cause, substance intoxication, medication use, or withdrawal (Criterion E).(2)</p>
+<h1 id="Delirium">Delirium<a class="anchor-link" href="#Delirium">¶</a></h1><p><strong>Delirium</strong> is an acute clinical syndrome (ACS) that typically develops in <strong>older adults</strong>. It is characterized by <strong>disturbances</strong> in attention, awareness, and cognition, with a <strong>reduced ability</strong> to focus, sustain, or shift attention. It develops over a short period of time and tends to fluctuate throughout the day. The clinical presentation may vary, often including <strong>psychomotor</strong> and <strong>behavioral</strong> disturbances such as hyperactivity or hypoactivity, as well as alterations in sleep duration and architecture.(1)</p>
+<p>The clinical features are defined by the <strong>DSM-5</strong> as follows: a disturbance in attention (Criterion A); a rapid onset of symptoms (Criterion B); symptoms associated with an additional cognitive disturbance (Criterion C). These symptoms must not be better explained by a pre-existing neurocognitive disorder (NCD) or by a severely reduced level of arousal such as coma (Criterion D). There must also be evidence from the medical history, physical examination, or additional investigations supporting a direct medical cause, substance intoxication, medication use, or withdrawal (Criterion E).(2)</p>
 <h2 id="Chronodel-presentation">Chronodel presentation<a class="anchor-link" href="#Chronodel-presentation">¶</a></h2><p>The aim of this study is to analyze data from the <strong>Chronodel test</strong>, which assesses the ability to perform a task within <strong>30 seconds—specifically</strong>, counting from 0 to 30 in the correct order, without repetition and without skipping any numbers. The dataset includes a sample of participants (<strong>n = 43</strong>).</p>
 <p>The study was <strong>initially</strong> designed to assess the diagnostic performance of the <em>Chronodel test</em>, including sensitivity, specificity, positive predictive value (PPV), and negative predictive value (NPV), and to compare its performance with two other tests assessing similar cognitive functions: <em>Day Of The Week Backward</em> (<em>DOTWB</em>) and <em>Month Of The Year Backward</em> (<em>MOTYB</em>). (3)</p>
 <p>As the study is still ongoing, a <strong>preliminary analysis</strong> of the available data was conducted to <strong>explore</strong> the distribution of results and the level of agreement between the three tests.</p>
@@ -7878,6 +7878,26 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 <li><code>mois_reussi</code> (MOTYB)</li>
 <li><code>chrono_reussi</code> (Chronodel)</li>
 </ul>
+<h2 id="Script-organization">Script organization<a class="anchor-link" href="#Script-organization">¶</a></h2><h3 id="Data-processing-pipeline">Data processing pipeline<a class="anchor-link" href="#Data-processing-pipeline">¶</a></h3><h4 id="Data-import-verification">Data import verification<a class="anchor-link" href="#Data-import-verification">¶</a></h4><ul>
+<li><strong>Aim</strong>: Verify the presence of the dataset in the project directory.</li>
+<li><strong>Input</strong>: Raw dataset file (Data/ChronodelSansTNC_DATA_2026-03-30_1433.csv) from <code>Data</code> folder</li>
+<li><strong>Output</strong>: Confirmation of file availability</li>
+</ul>
+<h4 id="Application-of-inclusion-criteria">Application of inclusion criteria<a class="anchor-link" href="#Application-of-inclusion-criteria">¶</a></h4><ul>
+<li><strong>Aim</strong>: Exclude subjects not meeting the study inclusion criteria.</li>
+<li><strong>Input</strong>: Raw dataset (Data)</li>
+<li><strong>Output</strong>: Filtered dataset containing eligible subjects only</li>
+</ul>
+<h4 id="Descriptive-analysis-and-data-cleaning">Descriptive analysis and data cleaning<a class="anchor-link" href="#Descriptive-analysis-and-data-cleaning">¶</a></h4><ul>
+<li><strong>Aim</strong>: Compute success rates and generate descriptive statistics.</li>
+<li><strong>Input</strong>: Cleaned dataset</li>
+<li><strong>Output</strong>:<ul>
+<li>Success rate table (data_graph.csv) into <code>Results</code> folder</li>
+<li>Figure (Success_rate_Rstudio.png) into <code>Figures</code> folder</li>
+<li>Final analysis dataset (Stat_Chronodel_Rstudio_test.csv) into <code>Results</code> folder</li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7886,7 +7906,7 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -7903,7 +7923,7 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8091,7 +8111,7 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Delete the lines 11, 28 and 29</span>
@@ -8117,7 +8137,7 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># show me the number of lines</span>
@@ -8132,7 +8152,7 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>40</pre>
 </div>
@@ -8155,7 +8175,7 @@ Analysis of Chronodel Test Performance and Agreement with Cognitive Measures
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"jour_reussite"</span><span class="p">,</span> <span class="s2">"mois_reussi"</span><span class="p">,</span> <span class="s2">"chrono_reussi"</span><span class="p">]</span>
@@ -8212,7 +8232,7 @@ Success rate for chrono_reussi: 100.00%
 <p>For the first figure, the percentage of correct responses (0 = no, 1 = yes) was computed for the three tests (DOTWB, MOTYB, and Chronodel).</p>
 <p>The DOTWB test showed a success rate of 97.29%, with 2.70% of failures. This indicates a very high performance level, with a marked ceiling effect.</p>
 <p>The MOTYB test showed a more balanced distribution, with a success rate of 58.97% and 41.02% of failures.</p>
-<p>Finally, the Chronodel test showed a 100% success rate, indicating no variability in the results and a strong ceiling effect.</p>
+<p>Finally, the Chronodel test showed a 100% success rate, indicating no variability in the results and suggesting a ceiling effect.</p>
 </div>
 </div>
 </div>
@@ -8221,7 +8241,7 @@ Success rate for chrono_reussi: 100.00%
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -8271,7 +8291,7 @@ Success rate for chrono_reussi: 100.00%
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>These results suggest a pronounced ceiling effect for both the DOTWB and Chronodel tests, as evidenced by their high success rates. In contrast, the MOTYB test shows a more balanced distribution of outcomes, with a success rate closer to 50%.</p>
+<p>These results suggest a ceiling effect for both the DOTWB and Chronodel tests, as evidenced by their high success rates. In contrast, the MOTYB test shows a more balanced distribution of outcomes, with a success rate closer to 50%.</p>
 </div>
 </div>
 </div>
@@ -8280,7 +8300,7 @@ Success rate for chrono_reussi: 100.00%
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#create a new csv file of the data with only the columns "jour_reussite", "mois_reussi" and "chrono_reussi" with a new name "Stat_Chronodel_Rstudio_test.csv"</span>
@@ -8297,7 +8317,107 @@ Success rate for chrono_reussi: 100.00%
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>A cleaned dataset was generated for subsequent statistical analysis in RStudio. It includes only the variables of interest (<code>jour_reussite</code>, <code>mois_reussi</code>, <code>chrono_reussi</code>) and was exported as (Stat_Chronodel_Rstudio_test.csv) in the Results folder.</p>
+<p>A cleaned dataset was generated for subsequent statistical analysis in RStudio. It includes only the variables of interest (<code>jour_reussite</code>, <code>mois_reussi</code>, <code>chrono_reussi</code>) and was exported as (Stat_Chronodel_Rstudio_test.csv) in the <code>Results</code> folder.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=885d2614">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"Results/Stat_Chronodel_Rstudio_test.csv"</span><span class="p">)</span>
+<span class="n">new_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>jour_reussite</th>
+<th>mois_reussi</th>
+<th>chrono_reussi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1.0</td>
+<td>0.0</td>
+<td>1</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1.0</td>
+<td>1.0</td>
+<td>1</td>
+</tr>
+<tr>
+<th>2</th>
+<td>NaN</td>
+<td>0.0</td>
+<td>1</td>
+</tr>
+<tr>
+<th>3</th>
+<td>1.0</td>
+<td>1.0</td>
+<td>1</td>
+</tr>
+<tr>
+<th>4</th>
+<td>1.0</td>
+<td>0.0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=22c86f83">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="References">References<a class="anchor-link" href="#References">¶</a></h1><ol>
+<li>Andorra, Boris, Alexandre Boussuge, Thomas Gilbert, et al. ‘Le Repérage et Le Diagnostic de l’état Confusionnel Aigu Chez Les Personnes Âgées : Quels Outils Rapides ?’ Gériatrie et Psychologie Neuropsychiatrie Du Vieillissement 20, no. 1 (2022): 17–27. <a href="https://doi.org/10.1684/pnv.2022.1022">https://doi.org/10.1684/pnv.2022.1022</a>.</li>
+<li>Garnier-Crussard, Antoine, Clémence Grangé, Jean-Michel Dorey, and Guillaume Chapelet. ‘Diagnostic et Prise En Soins Du Syndrome Confusionnel Aigu Chez La Personne Âgée’. La Revue de Médecine Interne 46, no. 5 (2025): 265–75. <a href="https://doi.org/10.1016/j.revmed.2024.11.005">https://doi.org/10.1016/j.revmed.2024.11.005</a>.</li>
+<li>Ramírez Echeverría, María de Lourdes, and Caroline Schoo. ‘Delirium’. In StatPearls. StatPearls Publishing, 2026. <a href="http://www.ncbi.nlm.nih.gov/books/NBK470399/">http://www.ncbi.nlm.nih.gov/books/NBK470399/</a>.</li>
+<li>Rasmussen, L. S., K. Larsen, P. Houx, et al. ‘The Assessment of Postoperative Cognitive Function’. Acta Anaesthesiologica Scandinavica 45, no. 3 (2001): 275–89. <a href="https://doi.org/10.1034/j.1399-6576.2001.045003275.x">https://doi.org/10.1034/j.1399-6576.2001.045003275.x</a>.</li>
+<li>Zec, Slavica, Nicola Soriani, Rosanna Comoretto, and Ileana Baldi. ‘High Agreement and High Prevalence: The Paradox of Cohen’s Kappa’. The Open Nursing Journal 11 (October 2017): 211–18. <a href="https://doi.org/10.2174/1874434601711010211">https://doi.org/10.2174/1874434601711010211</a>.</li>
+</ol>
 </div>
 </div>
 </div>

@@ -61,15 +61,15 @@ A small number of missing values were observed. As these were limited and not ov
 ## 3.1 Role of Rstudio
 
 R was used for:
+
 - statistical analysis (Cohen’s kappa)
 - graphical representations
 - final interpretation of results
 
-A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.
-
 # Data organization
 
 **The file** "Stat_Chronodel_Rstudio_test.csv" contains the cleaned dataset with the following variables:
+
 - *jour_reussite* (DOTWB): binary variable indicating success (1) or failure (0) on the Day Of The Week Backward test
 - *mois_reussi* (MOTYB): binary variable indicating success (1) or failure (0) on the Month Of The Year Backward test
 - *chrono_reussi* : binary variable indicating success (1) or failure (0) on the Chronodel test
@@ -91,7 +91,7 @@ A small number of missing values were observed. As these were limited and not ov
 ## success rate
 - **aim**: to calculate the percentage of success for each test and to visualize these rates using a bar plot.
 - **Input**: cleaned dataset stored in the `Data` folder.
-- **output**: a bar plot showing the success rates for *DOTWB*, *MOTYB*, and *Chronodel* called "Success rate for the three tests" and saved as (Success_rate_Rstudio.png)in the `Results` folder.
+- **output**: a bar plot showing the success rates for *DOTWB*, *MOTYB*, and *Chronodel* called "Success rate for the three tests" and saved as (Success_rate_Rstudio.png) in the `Results` folder.
 
 ## distribution 
 
@@ -112,7 +112,7 @@ Data <- read.csv("Data/Stat_Chronodel_Rstudio_test.csv")
 
 ## Total subjects
 
-**Cohen’s kappa analyses** were conducted using complete cases for each pairwise comparison.. Therefore, the number of complete observations available for jour_reussite (*DOTWB*) and mois_reussi (*MOTYB*) was assessed prior to analysis.
+**Cohen’s kappa analyses** were conducted using complete cases for each pairwise comparison. Therefore, the number of complete observations available for jour_reussite (*DOTWB*) and mois_reussi (*MOTYB*) was assessed prior to analysis.
 
 ```{r}
 # Calculate the number of complete cases for each pairwise comparison
