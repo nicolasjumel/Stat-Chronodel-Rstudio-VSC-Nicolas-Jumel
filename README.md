@@ -181,7 +181,7 @@ The analysis of Chronodel data in the context of delirium reveals:
 - The *DOTWB* test suggests a ceiling effect.
 - The *MOTYB* test shows a more balanced distribution.
 
-This interpretation is descriptive and based on outcome distributions rather than on a formal statistical test of ceiling effects. Missing values were limited and did not overlap across variables; therefore, complete-case analyses were performed.
+**This interpretation is descriptive and based on outcome distributions rather than on a formal statistical test of ceiling effects. Missing values were limited and did not overlap across variables; therefore, complete-case analyses were performed.**
 
 # 6. References
 

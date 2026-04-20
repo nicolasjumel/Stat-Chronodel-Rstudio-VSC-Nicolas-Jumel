@@ -273,7 +273,7 @@ Ceiling effects may **limit** the **interpretability** of test scores when a tas
 - The *DOTWB* test suggests a ceiling effect.
 - The *MOTYB* test shows a more balanced distribution.
 
-**This interpretation is descriptive and based on outcome distributions rather than on a formal statistical test of ceiling effects. In addition, results are based on available data per analysis, and comparisons should therefore be interpreted cautiously due to partially overlapping samples.**
+**This interpretation is descriptive and based on outcome distributions rather than on a formal statistical test of ceiling effects. Missing values were limited and did not overlap across variables; therefore, complete-case analyses were performed.**
 
 # References
 
