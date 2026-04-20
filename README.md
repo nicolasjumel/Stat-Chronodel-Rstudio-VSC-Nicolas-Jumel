@@ -145,11 +145,11 @@ The **very low kappa values** should be interpreted in the context of the **outc
 
 A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB*.
 
-- `Results/cross_tab_dotwb_motyb.csv`
+- `Rstudio/Results/cross_tab_dotwb_motyb.csv`
 
 ## 4.3 Success rate
 
-![cross_tab_dotwb_motyb](Rstudio/Results/cross_tab_dotwb_motyb.csv)
+![Success rate](Images/Success_rate.png)
 
 The success rates of the three tests were analysed to assess their **coherence** and **potential** ceiling effects.
 
