@@ -38,7 +38,7 @@ The project is available on GitHub at this link: https://github.com/nicolasjumel
 
 ## General context
 
-**Delirium** is an acute clinical syndrome (ACS) that typically develops in **older adults**. It is characterized by **disturbances** in attention, awareness, andcognition, with a **reduced ability** to focus, sustain, or shift attention. It develops over a short period of time and tends to fluctuate throughout the day. The clinical presentation may vary, often including **psychomotor** and **behavioral** disturbances such as hyperactivity or hypoactivity, as well as alterations in sleep duration and architecture.(1)
+**Delirium** is an acute clinical syndrome (ACS) that typically develops in **older adults**. It is characterized by **disturbances** in attention, awareness, and cognition, with a **reduced ability** to focus, sustain, or shift attention. It develops over a short period of time and tends to fluctuate throughout the day. The clinical presentation may vary, often including **psychomotor** and **behavioral** disturbances such as hyperactivity or hypoactivity, as well as alterations in sleep duration and architecture.(1)
 
 The clinical features are defined by the **DSM-5** as follows: a disturbance in attention (Criterion A); a rapid onset of symptoms (Criterion B); symptoms associated with an additional cognitive disturbance (Criterion C). These symptoms must not be better explained by a pre-existing neurocognitive disorder (NCD) or by a severely reduced level of arousal such as coma (Criterion D). There must also be evidence from the medical history, physical examination, or additional investigations supporting a direct medical cause, substance intoxication, medication use, or withdrawal (Criterion E).(2)
 
@@ -62,7 +62,7 @@ Therefore, the analysis plan was revised to focus on:
 
 A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.
 
-## 3.1 Role of Rstudio
+## Role of Rstudio
 
 R was used for:
 
@@ -162,7 +162,7 @@ A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB
 cross_tab <- table(Data$jour_reussite, Data$mois_reussi)
 knitr::kable(
   table(Data$jour_reussite, Data$mois_reussi),
-  caption = "Cross-tabulation between DOTWB and MOTYB results"
+  caption = "cross_tab_dotwb_motyb.csv"
 )
 ```
 

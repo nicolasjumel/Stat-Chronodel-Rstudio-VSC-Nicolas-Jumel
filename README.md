@@ -143,16 +143,16 @@ The **very low kappa values (κ ≈ 0 across comparisons**) should be interprete
 
 ## 4.2 Cross table
 
-The cross-tabulation between *DOTWB* and *MOTYB* is available in the Results folder:
+The cross-tabulation between *DOTWB* and *MOTYB* is available in the `Results` folder:
 
-- `Rstudio/Results/cross_tab_dotwb_motyb.csv`
+- `Results/cross_tab_dotwb_motyb.csv`
 
 |   | 0 | 1 |
 |---|---|---|
 | 0 | 1 | 0 |
 | 1 | 13 | 22 |
 
-The cross-tabulation confirms a relatively low concordance between *DOTWB* and *MOTYB*, with a discordance rate of 36.1% (13/36), consistent with the low agreement observed using Cohen’s kappa.
+The cross-tabulation confirms a relatively low concordance between *DOTWB* and *MOTYB*, with a discordance of (13/36 pairs) corresponding to 36.1%, consistent with the low agreement observed using Cohen’s kappa.
 
 ## 4.3 Success rate
 
@@ -181,7 +181,7 @@ The analysis of Chronodel data in the context of delirium reveals:
 - The *DOTWB* test suggests a ceiling effect.
 - The *MOTYB* test shows a more balanced distribution.
 
-**This interpretation is descriptive and based on outcome distributions rather than on a formal statistical test of ceiling effects. In addition, results are based on available data per analysis, and comparisons should therefore be interpreted cautiously due to partially overlapping samples.**
+This interpretation is descriptive and based on outcome distributions rather than on a formal statistical test of ceiling effects. Missing values were limited and did not overlap across variables; therefore, complete-case analyses were performed.
 
 # 6. References
 
