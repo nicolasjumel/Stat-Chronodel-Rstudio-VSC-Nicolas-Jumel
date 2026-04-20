@@ -5,7 +5,7 @@
 - Chronodel **strongly suggests a ceiling effect** (100% success)
 - DOTWB **suggests a ceiling effect** (97.3% success)
 - MOTYB shows a **more balanced distribution** (~59% success)
-- Low agreement between tests (**κ = 0.086**)
+- Low agreement between tests (**κ ≈ 0 across comparisons**)
 
 ## 1.1. Delirium
 
@@ -31,7 +31,7 @@ Therefore, the analysis plan was revised to focus on:
 - **the concordance** between tests
 - **the distribution** of results to assess variability and potential ceiling effects
 
-A small number of missing values were observed. As these were limited and not overlapping across variables, analyses were conducted using available data.
+As these were limited and not overlapping across variables, analyses were conducted using available data, resulting in partially overlapping samples across analyses.
 
 # 2. Python Project
 
@@ -126,25 +126,30 @@ A small number of missing values were observed. As these were limited and not ov
 
 # 4. Data processing
 
-Data cleaning was carried out prior to analysis using Visual Studio Code. The cleaned dataset was then imported into RStudio for statistical analysis from the file "Stat_Chronodel_Rstudio_test.csv".
+**This section presents the statistical analyses conducted in R to assess agreement and distribution patterns between tests.**
+
+Data cleaning was carried out prior to analysis using Visual Studio Code. The cleaned dataset was then imported into RStudio for 
+statistical analysis from the file "Stat_Chronodel_Rstudio_test.csv".
 
 ## 4.1 Cohen's kappa
 
-**Cohen’s kappa analyses-** were conducted separately for each pairwise comparison using pairwise complete-case datasets. As a result, the effective sample size varied across comparisons depending on the availability of both variables involved in each pair
+**Cohen’s kappa analyses** were conducted using pairwise complete-case datasets for each comparison. **As a result**, the effective sample size **varied** depending on the availability of **both variables** involved in each pair.
 
 **Cohen’s kappa** was used as the **primary measure of agreement**, despite known limitations in the presence of highly unbalanced outcome distributions including the so-called paradox of Cohen’s kappa.
 
 Alternative agreement coefficients less sensitive to prevalence (e.g., **Gwet’s AC1**) have been proposed in the literature, but were not implemented in the present analysis due to **software constraints** and **the exploratory nature** of the study.(5)
 
-This pattern may be partly explained by **distributional characteristics** of the data, **potentially indicating a ceiling effect**, which will be further explored in the subsequent descriptive analyses and graphical representations.
+The **very low kappa values** should be interpreted in the context of the **outcome distributions**. This lack of variability **limits** the ability of agreement statistics to detect concordance beyond chance. These aspects are further explored in the descriptive analyses.
 
 ## 4.2 Cross table
 
 A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB*.
 
+- `Results/cross_tab_dotwb_motyb.csv`
+
 ## 4.3 Success rate
 
-![Success rate](Images/Success_rate.png)
+![cross_tab_dotwb_motyb](Rstudio/Results/cross_tab_dotwb_motyb.csv)
 
 The success rates of the three tests were analysed to assess their **coherence** and **potential** ceiling effects.
 
