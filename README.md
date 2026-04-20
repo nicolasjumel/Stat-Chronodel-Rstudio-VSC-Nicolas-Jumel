@@ -143,9 +143,14 @@ The **very low kappa values** should be interpreted in the context of the **outc
 
 ## 4.2 Cross table
 
-A cross-tabulation was performed to assess agreement between  *DOTWB* and *MOTYB*.
+The cross-tabulation between *DOTWB* and *MOTYB* is available in the Results folder:
 
 - `Rstudio/Results/cross_tab_dotwb_motyb.csv`
+
+|   | 0 | 1 |
+|---|---|---|
+| 0 | 1 | 0 |
+| 1 | 13 | 22 |
 
 ## 4.3 Success rate
 
