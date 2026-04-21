@@ -30,6 +30,8 @@ output:
   </tr>
 </table>
 
+**Assessment of Attention in Older Patients Without Chronic Cognitive Impairment in Stable or Unstable Clinical Conditions: A Prospective Descriptive Study**
+
 # Project accessibility
 
 The project is available on GitHub at this link: https://github.com/nicolasjumel/Stat-Chronodel-Rstudio-VSC-Nicolas-Jumel
