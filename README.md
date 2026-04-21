@@ -1,4 +1,4 @@
-# 1. Stat Chronodel Rstudio VSC
+# 1. Chronodel Data Analysis
 
 ## Key findings
 
